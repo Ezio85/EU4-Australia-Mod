@@ -26,7 +26,7 @@ spa_colonial_group = {
 				}
 				custom_trigger_tooltip = {
 					tooltip = miss_discover_caribbean
-					colonial_the_carribean = {
+					carribeans_region = {
 						has_discovered = ROOT
 					}
 				}
@@ -53,7 +53,7 @@ spa_colonial_group = {
 		completed_by = 1493.1.1
 		
 		provinces_to_highlight = {
-			colonial_region = colonial_the_carribean
+			region = carribeans_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = yes
 		}
@@ -63,7 +63,7 @@ spa_colonial_group = {
 				tooltip = miss_colonize_caribbean
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 1
-					colonial_region = colonial_the_carribean
+					region = carribeans_region
 					is_city = yes
 				}
 			}
@@ -251,7 +251,7 @@ spa_colonial_group_rnw_off = {
 		
 		effect = {
 			add_treasury = 800
-			colonial_peru = {
+			peru_region = {
 				limit = {
 					NOT = { is_empty = yes }
 				}
