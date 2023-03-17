@@ -327,7 +327,7 @@ french_missions_colonial = {
 			OR = {
 				colonial_region = colonial_eastern_america
 				colonial_region = colonial_louisiana
-				colonial_region = colonial_the_carribean
+				region = carribeans_region
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -336,7 +336,7 @@ french_missions_colonial = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
-				colonial_region = colonial_the_carribean
+				region = carribeans_region
 			}
 			OR = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {

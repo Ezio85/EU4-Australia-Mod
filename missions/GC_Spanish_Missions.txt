@@ -1865,7 +1865,7 @@ gc_spain_4_c = {
 		position = 6
 
 		provinces_to_highlight = {
-			colonial_region = colonial_la_plata
+			region = la_plata_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = yes
 		}
@@ -1873,7 +1873,7 @@ gc_spain_4_c = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
-				colonial_region = colonial_la_plata
+				region = la_plata_region
 				is_city = yes
 			}
 		}

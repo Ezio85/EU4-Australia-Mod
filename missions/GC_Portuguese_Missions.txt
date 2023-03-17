@@ -716,7 +716,7 @@ gc_por_3_b = {
 		position = 2
 		
 		provinces_to_highlight = {
-			colonial_region = colonial_the_carribean
+			region = carribeans_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -724,7 +724,7 @@ gc_por_3_b = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
-				colonial_region = colonial_the_carribean
+				region = carribeans_region
 				is_city = yes
 			}
 		}
@@ -741,7 +741,7 @@ gc_por_3_b = {
 							is_subject_of_type = self_governing_colony
 						}
 						capital_scope = {
-							colonial_region = colonial_the_carribean
+							region = carribeans_region
 						}
 					}
 					add_country_modifier = {

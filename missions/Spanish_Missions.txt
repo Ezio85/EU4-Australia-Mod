@@ -78,32 +78,6 @@ spa_colonial_group = {
 		}
 	}
 	
-	spa_rb_la_plata = {
-		icon = mission_iberian_conquistador
-		required_missions = { spa_rb_caribbean_colony }
-		completed_by = 1508.1.1
-		
-		provinces_to_highlight = {
-			colonial_region = colonial_la_plata
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = yes
-		}
-		
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 5
-				colonial_region = colonial_la_plata
-				is_city = yes
-			}
-		}
-		
-		effect = {
-			add_country_modifier = {
-				name = "spa_rb_overseas_trade"
-				duration = 5475
-			}
-		}
-	}
 }
 
 spa_colonial_group_rnw_off = {
