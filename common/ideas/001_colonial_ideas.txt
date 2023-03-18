@@ -1,0 +1,295 @@
+#Idea Groups for Colonial Nations
+
+#Northeastern USA + Canada
+colonial_eastern_america_ideas = {
+	start = {
+		#
+		#
+	}
+	
+	bonus = {
+		#
+	}
+	
+	trigger = {
+		capital_scope = {
+			colonial_region = colonial_eastern_america
+		}
+		is_colonial_nation = yes
+	}
+	free = yes
+	
+	idea_1 = {
+		#
+	}
+	idea_2 = {
+		#
+	}
+	idea_3 = {
+		#
+	}
+	idea_4 = {
+		#
+	}
+	idea_5 = {
+		#
+	}
+	idea_6 = {
+		#
+	}
+	idea_7 = {
+		#
+	}
+}
+
+#Southern US (Dixie)
+colonial_louisiana_ideas = {
+	start = {
+		#
+		#
+	}
+	
+	bonus = {
+		#
+	}
+	
+	trigger = {
+		capital_scope = {
+			colonial_region = colonial_louisiana
+		}
+		is_colonial_nation = yes
+	}
+	free = yes
+	
+	idea_1 = {
+		#
+	}
+	idea_2 = {
+		#
+	}
+	idea_3 = {
+		#
+	}
+	idea_4 = {
+		#
+	}
+	idea_5 = {
+		#
+	}
+	idea_6 = {
+		#
+	}
+	idea_7 = {
+		#
+	}
+}
+
+#American West Coast
+colonial_california_ideas = {
+	start = {
+		#
+		#
+	}
+	
+	bonus = {
+		
+	}
+	
+	trigger = {
+		capital_scope = {
+			colonial_region = colonial_california
+		}
+		is_colonial_nation = yes
+	}
+	free = yes
+	
+	idea_1 = {
+		#
+	}
+	idea_2 = {
+		#
+	}
+	idea_3 = {
+		#
+	}
+	idea_4 = {
+		#
+	}
+	idea_5 = {
+		#
+	}
+	idea_6 = {
+		#
+	}
+	idea_7 = {
+		#
+	}
+}
+
+#Mexico
+coloniaL_mexico_ideas = {
+	start = {
+		#
+		#
+	}
+	
+	bonus = {
+		#
+	}
+	
+	trigger = {
+		capital_scope = {
+			colonial_region = colonial_mexico
+		}
+		is_colonial_nation = yes
+	}
+	free = yes
+	
+	idea_1 = {
+		#
+	}
+	idea_2 = {
+		#
+	}
+	idea_3 = {
+		#
+	}
+	idea_4 = {
+		#
+	}
+	idea_5 = {
+		#
+	}
+	idea_6 = {
+		#
+	}
+	idea_7 = {
+		#
+	}
+}
+
+#Colombia + Peru
+colonial_colombia_ideas = {
+	start = {
+		#
+		#
+	}
+	
+	bonus = {
+		#
+	}
+	
+	trigger = {
+		capital_scope = {
+			colonial_region = colonial_colombia
+		}
+		is_colonial_nation = yes
+	}
+	free = yes
+	
+	idea_1 = {
+		#
+	}
+	idea_2 = {
+		#
+	}
+	idea_3 = {
+		#
+	}
+	idea_4 = {
+		#
+	}
+	idea_5 = {
+		#
+	}
+	idea_6 = {
+		#
+	}
+	idea_7 = {
+		#
+	}
+}
+
+#Brazil + La Plata
+colonial_brazil_ideas = {
+	start = {
+		#
+		#
+	}
+	
+	bonus = {
+		#
+	}
+	
+	trigger = {
+		capital_scope = {
+			colonial_region = colonial_brazil
+		}
+		is_colonial_nation = yes
+	}
+	free = yes
+	
+	idea_1 = {
+		#
+	}
+	idea_2 = {
+		#
+	}
+	idea_3 = {
+		#
+	}
+	idea_4 = {
+		#
+	}
+	idea_5 = {
+		#
+	}
+	idea_6 = {
+		#
+	}
+	idea_7 = {
+		#
+	}
+}
+
+#Australia
+colonial_australia_ideas = {
+	start = {
+		#
+		#
+	}
+	
+	bonus = {
+		#
+	}
+	
+	trigger = {
+		capital_scope = {
+			colonial_region = colonial_australia
+		}
+		is_colonial_nation = yes
+	}
+	free = yes
+	
+	idea_1 = {
+		#
+	}
+	idea_2 = {
+		#
+	}
+	idea_3 = {
+		#
+	}
+	idea_4 = {
+		#
+	}
+	idea_5 = {
+		#
+	}
+	idea_6 = {
+		#
+	}
+	idea_7 = {
+		#
+	}
+}
