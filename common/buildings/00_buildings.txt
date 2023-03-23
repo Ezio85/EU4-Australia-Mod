@@ -2034,8 +2034,7 @@ manufactory = {
 	cost = 500
 	time = 60
 	modifier = {
-		trade_goods_size = 0.5
-		trade_goods_size_modifier = 0.25	
+		trade_goods_size = 1
 	}
 }
 
@@ -2370,10 +2369,10 @@ soldier_households = {
 	}
 
 	modifier = {
-		local_manpower = 0.5
+		local_manpower = 0.75
 	}
 	bonus_modifier = {
-		local_manpower = 0.5
+		local_manpower = 0.75
 	}
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
