@@ -631,6 +631,8 @@ RUS_ideas = {
 
 	bonus = {
 		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 1
 	}
 
 	trigger = {
