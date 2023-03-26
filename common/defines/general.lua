@@ -28,6 +28,12 @@ NDefines.NEconomy.DEBASE_MAX_CORRUPTION = 20            -- from 90
 NDefines.NDiplomacy.NUM_OF_GREAT_POWERS	= 12            -- from 8
 NDefines.NEconomy.CARAVAN_POWER_MIN = 0
 NDefines.NCountry.MAXIMUM_CONDOTTIERI = 1               -- from 20 
+NDefines.NEconomy.DECREASE_AUTONOMY_MIN = 0             -- from 10
+-- Lategame economy changes
+NDefines.NMilitary.BASE_MP_TO_MANPOWER = 0.375            -- from 0.25
+NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.04   -- from 0.02
+NDefines.NCountry.ADVISOR_COST_INCREASE_PER_YEAR = 0.01 -- from 0.005
+
 -- Tariff Changes
 NDefines.NCountry.PS_RAISE_TARIFFS = 10             -- from 50
 NDefines.NCountry.PS_LOWER_TARIFFS = 10             -- from 25
