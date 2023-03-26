@@ -61,3 +61,7 @@
  KALMAR_UNION_ADJ:0 "Scandinavian"
  IFR:0 "Ifriqiya"
  IFR_ADJ:0 "Ifriqiya"
+ SAFAVID_EMPIRE:0 "Safavids"
+ SAFAVID_EMPIRE_ADJ: "Safavid"
+ IRA:0 "Iran"
+ IRA_ADJ:0 "Iranian"
