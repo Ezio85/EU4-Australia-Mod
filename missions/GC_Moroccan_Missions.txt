@@ -75,12 +75,12 @@ gc_morocco_1 = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 2466
-				province_id = 1110
+				province_id = 2460
 			}
 		}
 
 		trigger = {
-			1110 = {
+			2460 = {
 				is_strongest_trade_power = ROOT
 			}
 			if = {
