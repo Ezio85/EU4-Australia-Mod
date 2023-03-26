@@ -3658,12 +3658,18 @@ legislative_sejm = {
 	allow_normal_conversion = yes
 	
 	potential = {
-		has_reform = elective_monarchy
+		OR = {
+			has_reform = polish_elective_monarchy
+			has_reform = elective_monarchy
+		}
 		has_dlc = "Res Publica"
 	}
 	
 	trigger = {
-		has_reform = elective_monarchy
+		OR = {
+			has_reform = polish_elective_monarchy
+			has_reform = elective_monarchy
+		}
 	}
 	
 	modifiers = {
@@ -3682,12 +3688,18 @@ integrated_sejmiks = {
 	allow_normal_conversion = yes
 	
 	potential = {
-		has_reform = elective_monarchy
+		OR = {
+			has_reform = polish_elective_monarchy
+			has_reform = elective_monarchy
+		}
 		has_dlc = "Res Publica"
 	}
 	
 	trigger = {
-		has_reform = elective_monarchy
+		OR = {
+			has_reform = polish_elective_monarchy
+			has_reform = elective_monarchy
+		}
 	}
 	
 	modifiers = {
