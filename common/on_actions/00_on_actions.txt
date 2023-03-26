@@ -2,6 +2,18 @@
 
 # country
 on_startup = {
+	#Deletes America
+	every_province = {
+		limit = {
+			OR = {
+				continent = north_america
+				continent = south_america
+				
+			}
+		}
+		decolonize = THIS
+		set_global_flag = deleted_americas_flag
+	}	
 	if = {
 		limit = {
 			current_age = age_of_discovery
