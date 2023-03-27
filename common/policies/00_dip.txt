@@ -25,6 +25,9 @@ may_explore_policy = { #May Explore
 	monarch_power = DIP
 
 	potential = {
+		NOT = {
+			has_idea_group = expansion_ideas
+		}
 	}
 	allow = {
 		calc_true_if = {
@@ -130,12 +133,16 @@ colonial_administration_act = { #+1Colonist +20 Colony Growth
 	monarch_power = DIP
 
 	potential = {
+		NOT = {
+			has_idea_group = expansion_ideas
+		}
 	}
 	allow = {
 		calc_true_if = {
 			has_filled_ideas_trigger = yes
 			amount = 1
 		}
+		
 	}
 	
 	colonists = 1

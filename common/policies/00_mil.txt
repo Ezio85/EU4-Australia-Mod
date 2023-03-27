@@ -143,6 +143,7 @@ public_road_act = { #+75% Vassal forcelimit bonus
 
 	potential = {
 		adm_tech = 7
+		always = no
 	}
 	allow = {
 		calc_true_if = {
@@ -910,6 +911,7 @@ banners_policy = { #+20% possible banners
 
 	potential = {
 		adm_tech = 18
+		num_of_banners = 1
 	}
 	allow = {
 		calc_true_if = {

@@ -398,6 +398,7 @@ diplomatic_cooperation_act = { #-10% Prov WS Cost
 				amount = 5
 			}
 		}
+		always = no
 	}
 	allow = {
 		calc_true_if = {
