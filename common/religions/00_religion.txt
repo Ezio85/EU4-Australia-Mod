@@ -538,7 +538,7 @@ christian = {
 		}
 		country = {
 			tolerance_heretic = 2
-			advisor_cost = -0.1
+			advisor_pool = 1
 		}
 		declare_war_in_regency = yes
 		country_as_secondary = {

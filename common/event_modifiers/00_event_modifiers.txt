@@ -1510,8 +1510,8 @@ religious_zeal_at_conv = {
 
 
 papal_sanction_for_church_taxes = {
-	global_tax_modifier = 0.1
-	build_cost = -0.05
+	global_tax_modifier = 0.15
+	inflation_reduction = 0.1
 	religion = yes
 }
 
@@ -1527,7 +1527,7 @@ papal_indulgence = {
 
 usury_forgiven = {
 	interest = -0.25
-	inflation_reduction = 0.1
+	build_cost = -0.1
 	yearly_corruption = -0.04
 	religion = yes
 }

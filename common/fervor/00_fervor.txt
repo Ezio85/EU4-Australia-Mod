@@ -1,5 +1,5 @@
 fervor_trade = {
-	cost = 3
+	cost = 5
 	effect = {
 		global_trade_power = 0.1
 		trade_efficiency = 0.1
@@ -32,7 +32,7 @@ fervor_trade = {
 }
 
 fervor_war = {
-	cost = 3
+	cost = 5
 	effect = {
 		land_morale = 0.1
 		naval_morale = 0.1
@@ -52,7 +52,7 @@ fervor_war = {
 }
 
 fervor_stability = {
-	cost = 3
+	cost = 5
 	effect = {
 		global_unrest = -2
 		build_cost = -0.1
