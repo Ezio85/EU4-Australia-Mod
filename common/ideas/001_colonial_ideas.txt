@@ -3,12 +3,12 @@
 #Northeastern USA + Canada
 colonial_eastern_america_ideas = {
 	start = {
-		#
-		#
+		infantry_power = 0.1
+		republican_tradition = 0.3
 	}
 	
 	bonus = {
-		#
+		fire_damage = 0.1
 	}
 	
 	trigger = {
@@ -19,38 +19,41 @@ colonial_eastern_america_ideas = {
 	}
 	free = yes
 	
-	idea_1 = {
-		#
+	ne_fur_trade = {
+		global_trade_goods_size = 0.2
 	}
-	idea_2 = {
-		#
+	ne_forestry = {
+		naval_forcelimit_modifier = 0.25
+		global_ship_cost = -0.1
 	}
-	idea_3 = {
-		#
+	ne_minutemen = {
+		global_regiment_recruit_speed = -0.5
+		may_return_manpower_on_disband = yes
 	}
-	idea_4 = {
-		#
+	colonial_settle_frontier = {
+		may_establish_frontier = yes
 	}
-	idea_5 = {
-		#
+	ne_indian_wars = {
+		army_tradition_decay = -0.01
 	}
-	idea_6 = {
-		#
+	ne_american_enlightenment = {
+		idea_cost = -0.05
+		technology_cost = -0.05
 	}
-	idea_7 = {
-		#
+	ne_native_alliances = {
+		manpower_recovery_speed = 0.2
 	}
 }
 
-#Southern US (Dixie)
+#Southern US (Louisiana)
 colonial_louisiana_ideas = {
 	start = {
-		#
-		#
+		cavalry_power = 0.15
+		merchants = 1
 	}
 	
 	bonus = {
-		#
+		manpower_in_true_faith_provinces = 0.15
 	}
 	
 	trigger = {
@@ -61,38 +64,38 @@ colonial_louisiana_ideas = {
 	}
 	free = yes
 	
-	idea_1 = {
-		#
+	la_fertile_soils = {
+		global_trade_goods_size_modifier = 0.1
 	}
-	idea_2 = {
-		#
+	la_plantation_economy = {
+		build_cost = -0.15
 	}
-	idea_3 = {
-		#
+	la_planter_class = {
+		nobles_loyalty_modifier = 0.1
 	}
-	idea_4 = {
-		#
+	colonial_settle_frontier = {
+		#Siberian Frontiers
 	}
-	idea_5 = {
-		#
+	la_mississippi_trade = {
+		global_own_trade_power = 0.25
 	}
-	idea_6 = {
-		#
+	la_southern_officers = {
+		army_tradition_from_battle = 1
 	}
-	idea_7 = {
-		#
+	la_frontier_fortifications = {
+		fort_maintenance_modifier = -0.2
 	}
 }
 
 #American West Coast
 colonial_california_ideas = {
 	start = {
-		#
-		#
+		land_morale = 0.15
+		mercenary_cost = -0.15
 	}
 	
 	bonus = {
-		
+		reinforce_speed = 0.25
 	}
 	
 	trigger = {
@@ -103,38 +106,40 @@ colonial_california_ideas = {
 	}
 	free = yes
 	
-	idea_1 = {
-		#
+	ca_gold_rush = {
+		mercenary_manpower = 0.33
 	}
-	idea_2 = {
-		#
+	ca_pacific_trade = {
+		trade_range_modifier = 0.33
+		trade_steering = 0.2
 	}
-	idea_3 = {
-		#
+	ca_rockies = {
+		land_attrition = -0.2
 	}
-	idea_4 = {
-		#
+	colonial_settle_frontier = {
+		#Siberian Frontiers
 	}
-	idea_5 = {
-		#
+	ca_pacific_whaling = {
+		global_sailors_modifier = 0.2
+		production_efficiency = 0.1
 	}
-	idea_6 = {
-		#
+	ca_desperados = {
+		mercenary_discipline = 0.05
 	}
-	idea_7 = {
-		#
+	ca_eastern_rangers = {
+		army_tradition = 0.5
 	}
 }
 
 #Mexico
-coloniaL_mexico_ideas = {
+colonial_mexico_ideas = {
 	start = {
-		#
-		#
+		shock_damage_received = -0.15
+		hostile_attrition = 1
 	}
 	
 	bonus = {
-		#
+		defensiveness = 0.15
 	}
 	
 	trigger = {
@@ -145,38 +150,39 @@ coloniaL_mexico_ideas = {
 	}
 	free = yes
 	
-	idea_1 = {
-		#
+	mx_seat_of_empires = {
+		land_morale = 0.1
 	}
-	idea_2 = {
-		#
+	rebuilding_mexico = {
+		build_cost = -0.1
 	}
-	idea_3 = {
-		#
+	casa_de_las_campanas = {
+		idea_cost = -0.1
 	}
-	idea_4 = {
-		#
+	colonial_settle_frontier = {
+		#Siberian Frontiers
 	}
-	idea_5 = {
-		#
+	repartimiento = {
+		production_efficiency = 0.15
 	}
-	idea_6 = {
-		#
+	vaqueros = {
+		movement_speed = 0.15
+		land_attrition = -0.1
 	}
-	idea_7 = {
-		#
+	mx_gold = {
+		gold_depletion_chance_modifier = -0.5
 	}
 }
 
 #Colombia + Peru
 colonial_colombia_ideas = {
 	start = {
-		#
-		#
+		movement_speed  = 0.15
+		development_cost = -0.1
 	}
 	
 	bonus = {
-		#
+		discipline = 0.05
 	}
 	
 	trigger = {
@@ -187,80 +193,85 @@ colonial_colombia_ideas = {
 	}
 	free = yes
 	
-	idea_1 = {
-		#
+	cl_rebuild_peru = {
+		global_allowed_num_of_buildings = 1
 	}
-	idea_2 = {
-		#
+	cl_potosi_silver_mines = {
+		gold_depletion_chance_modifier = -0.5
 	}
-	idea_3 = {
-		#
+	cl_darien_gap = {
+		hostile_attrition = 1
 	}
-	idea_4 = {
-		#
+	cl_panamanian_isthmus = {
+		trade_steering = 0.25
+		trade_range_modifier = 0.2
 	}
-	idea_5 = {
-		#
+	colonial_settle_frontier = {
+		#Siberian Frontiers
 	}
-	idea_6 = {
-		#
+	cl_andes_mountains = {
+		defensiveness = 0.2
 	}
-	idea_7 = {
-		#
+	cl_tupacs_rebellion = {
+		land_morale = 0.10
 	}
+	
 }
 
 #Brazil + La Plata
 colonial_brazil_ideas = {
 	start = {
-		#
-		#
+		land_attrition = -0.25
+		morale_damage = 0.1
 	}
 	
 	bonus = {
-		#
+		artillery_fire = 1
 	}
 	
 	trigger = {
 		capital_scope = {
 			colonial_region = colonial_brazil
 		}
-		is_colonial_nation = yes
+		OR = {
+			is_colonial_nation = yes
+			is_colony_trigger = yes
+		}
 	}
 	free = yes
 	
-	idea_1 = {
-		#
+	bz_amazon_navigation = {
+		movement_speed = 0.15
 	}
-	idea_2 = {
-		#
+	bz_come_to_brazil = {
+		development_cost = -0.1
 	}
-	idea_3 = {
-		#
+	bz_governor_general = {
+		governing_capacity_modifier = 0.15
 	}
-	idea_4 = {
-		#
+	bz_bandeirantes = {
+		may_establish_frontier = yes
 	}
-	idea_5 = {
-		#
+	bz_mamelucos = {
+		manpower_in_own_culture_provinces = 0.15
 	}
-	idea_6 = {
-		#
+	bz_mines = {
+		gold_depletion_chance_modifier = -0.5
 	}
-	idea_7 = {
-		#
+	bz_ranching = {
+		production_efficiency = 0.1
 	}
 }
 
 #Australia
 colonial_australia_ideas = {
 	start = {
-		#
-		#
+		colonists = 1
+		naval_forcelimit_modifier = 0.25
 	}
 	
 	bonus = {
-		#
+		morale_damage_received = -0.2
 	}
 	
 	trigger = {
@@ -271,25 +282,27 @@ colonial_australia_ideas = {
 	}
 	free = yes
 	
-	idea_1 = {
-		#
+	au_penal_colony = {
+		build_cost = -0.1
 	}
-	idea_2 = {
-		#
+	au_outback_stations = {
+		global_trade_goods_size = 0.2
 	}
-	idea_3 = {
-		#
+	au_rum_rebellion = {
+		discipline = 0.05
 	}
-	idea_4 = {
-		#
+	colonial_settle_frontier = {
+		#Siberian Frontiers
 	}
-	idea_5 = {
-		#
+	au_bennelong = {
+		idea_cost = -0.1
 	}
-	idea_6 = {
-		#
+	AUS_land_down_under = {
+		hostile_attrition = 1
+		land_attrition = -0.1
 	}
-	idea_7 = {
-		#
+	au_expand_north = {
+		trade_company_investment_cost = -0.15
+		globaL_naval_engagement_modifier = 0.1
 	}
 }
