@@ -573,3 +573,33 @@ country_event = {
 	
 	
 }
+#Change ideas when hotjoining as colonial nation
+country_event = {
+
+	id = new_events.9
+	title = "new_events.9.t"
+	desc = "new_events.9.desc"
+	picture = POPE_PREACHING_eventPicture
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_colony_trigger = yes
+		ai = no
+		NOT = {has_country_flag = idea_swapping_flag}
+	}
+
+	immediate = {
+		set_country_flag = idea_swapping_flag
+	}
+
+	option = {
+		name = new_events.9.a
+		custom_tooltip = "idea_swapping_tooltip"
+	}
+	
+	
+	
+}

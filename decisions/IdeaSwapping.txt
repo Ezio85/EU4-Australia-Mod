@@ -5,7 +5,13 @@ country_decisions = {
             NOT = {
                 has_country_flag = cleared_idea_groups_flag
             }
-            #Set Flag for player CN
+            NOT = {
+                had_country_flag = {
+                    flag = idea_swapping_flag
+                    days = 365
+                }
+            }
+            has_country_flag = idea_swapping_flag
         }
         allow = {
             adm_tech = 5
@@ -17,7 +23,7 @@ country_decisions = {
         effect = {
             clear_idea_groups_scripted_effect = yes
             set_country_flag = cleared_idea_groups_flag
-            set_country_flag = idea_reset_flag #Decisions time out after 365 ideas
+            set_country_flag = idea_reset_flag #Decisions time out after 365 days
         }
         ai_will_do = {
 			factor = 0
@@ -29,11 +35,12 @@ country_decisions = {
             ai = no
             NOT = {
                 had_country_flag = {
-                    flag = idea_reset_flag
+                    flag = idea_swapping_flag
                     days = 365
                 }
             }
             NOT = { has_country_flag = temp_idea_decision_flag }
+            has_country_flag = idea_reset_flag
         }
 
         major = yes
@@ -132,11 +139,12 @@ country_decisions = {
             ai = no
             NOT = {
                 had_country_flag = {
-                    flag = idea_reset_flag
+                    flag = idea_swapping_flag
                     days = 365
                 }
             }
             NOT = { has_country_flag = temp_idea_decision_flag }
+            has_country_flag = idea_reset_flag
         }
 
         major = yes
@@ -234,18 +242,18 @@ country_decisions = {
             ai = no
             NOT = {
                 had_country_flag = {
-                    flag = idea_reset_flag
+                    flag = idea_swapping_flag
                     days = 365
                 }
             }
             NOT = { has_country_flag = temp_idea_decision_flag }
+            has_country_flag = idea_reset_flag
         }
 
         major = yes
 
         allow = {
             ai = no
-            has_country_flag = idea_reset_flag
             idea_group_limit = yes
             OR = {
                 #Techs 5 to 10

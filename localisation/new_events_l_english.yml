@@ -77,6 +77,10 @@
  new_events.8.d:0 "One of the great prophets"
  new_events.8.e:0 "The Final Messenger"
  new_events.8.f:0 "God Himself."
+ new_events.9.t:0 "Welcome to $COUNTRY$	!"
+ new_events.9.desc:0 "Since you probably don't want Expansion and Maritime ideas, you have been given the opportunity to swap out your idea groups, just check your decisions."
+ new_events.9.a:0 "Wow Thanks!"
+ idea_swapping_tooltip:0 "Within the next 365 days, we will be able to swap idea groups via the decisions tab."
  
 
 
