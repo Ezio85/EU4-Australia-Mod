@@ -96,3 +96,11 @@ recruit_cossack_generals_modifier = {
 	is_cossack_modifier = yes
 	cavalry_power = 0.2
 }
+
+larger_colonial_nation = {
+	merchants = 1
+}
+
+largest_colonial_nation = {
+	merchants = 1
+}
