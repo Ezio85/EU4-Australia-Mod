@@ -80,6 +80,10 @@ change_estate_land_share = {
 	add_ruler_personality = obsessive_perfectionist_personality
 }
 
+1444.11.11 = {
+	add_truce_with = RAS
+}
+
 1453.2.13 = {
 	monarch = {
 		name = "In�l"
