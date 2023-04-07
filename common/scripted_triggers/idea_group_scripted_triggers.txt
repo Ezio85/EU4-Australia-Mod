@@ -25,6 +25,33 @@ has_dip_group_scripted_trigger = {
 	has_idea_group = humanist_ideas
 }
 
+full_adm_group_scripted_trigger = {
+	full_idea_group = expansion_ideas
+	full_idea_group = economic_ideas
+	full_idea_group = administrative_ideas
+	full_idea_group = religious_ideas
+	full_idea_group = infrastructure_ideas
+	full_idea_group = innovativeness_ideas
+}
+
+full_mil_group_scripted_trigger = {
+	full_idea_group = quality_ideas
+	full_idea_group = quantity_ideas
+	full_idea_group = aristocracy_ideas
+	full_idea_group = plutocracy_ideas
+	full_idea_group = offensive_ideas
+	full_idea_group = defensive_ideas
+}
+
+full_dip_group_scripted_trigger = {
+	full_idea_group = influence_ideas
+	full_idea_group = maritime_ideas
+	full_idea_group = spy_ideas
+	full_idea_group = statehood_ideas
+	full_idea_group = trade_ideas
+	full_idea_group = humanist_ideas
+}
+
 has_idea_groups_trigger = {
 	has_idea_group = aristocracy_ideas
 	has_idea_group = plutocracy_ideas
@@ -46,8 +73,25 @@ has_idea_groups_trigger = {
 	has_idea_group = statehood_ideas
 }
 
-idea_overstacking_limit_all = {
-
+has_filled_ideas_trigger = {
+	full_idea_group = aristocracy_ideas
+	full_idea_group = plutocracy_ideas
+	full_idea_group = innovativeness_ideas
+	full_idea_group = religious_ideas
+	full_idea_group = spy_ideas
+	full_idea_group = offensive_ideas
+	full_idea_group = defensive_ideas
+	full_idea_group = trade_ideas
+	full_idea_group = economic_ideas
+	full_idea_group = maritime_ideas
+	full_idea_group = quality_ideas
+	full_idea_group = quantity_ideas
+	full_idea_group = expansion_ideas
+	full_idea_group = administrative_ideas
+	full_idea_group = humanist_ideas
+	full_idea_group = influence_ideas
+	full_idea_group = infrastructure_ideas
+	full_idea_group = statehood_ideas
 }
 
 idea_group_limit = {

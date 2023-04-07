@@ -1,631 +1,48 @@
-#########################
-#Tier 1 Mil Policies    #
-#########################
+#Quality-Adm
 
-deserteur_act = { #+0.5 AT
+the_liquor_act = {
+	monarch_power = MIL
+	
+	
+	potential = {
+		has_idea_group = quality_ideas
+	}
+	
+	allow = {
+		full_idea_group = quality_ideas
+		calc_true_if = { 
+			full_adm_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}	
+	
+	recover_army_morale_speed = 0.15
+	reinforce_speed = 0.15
+
+	ai_will_do = {
+		factor = 0.6
+	}
+}
+
+#Quantity-Adm
+
+the_mining_act = {
 	monarch_power = MIL
 
 	potential = {
+		has_idea_group = quantity_ideas
 	}
 	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
+		full_idea_group = quantity_ideas
+		calc_true_if = { 
+			full_adm_group_scripted_trigger = yes 
 			amount = 1
 		}
 	}
-
-	army_tradition = 0.5
-
-	ai_will_do = {
-		factor = 0.75
-		modifier = {
-			factor = 0
-			NOT = { army_tradition = 2 }
-		}			
-		modifier = {
-			factor = 1.5
-			army_tradition = 30
-		}
-		modifier = {
-			factor = 1.5
-			army_tradition = 50
-		}
-		modifier = {
-			factor = 1.5
-			army_tradition = 80
-		}
-	}
-}
-
-land_leader_shock_policy = { #+1 land leader shock
-	monarch_power = MIL
-
-	potential = {
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 1
-		}
-	}
-
-	leader_land_shock = 1
-
-	ai_will_do = {
-		factor = 1.2		
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.28
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.38
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.45
-		}
-	}
-}
-
-square_formations = { #-10% Shock Damage Received
-	monarch_power = MIL
-
-	potential = {
-		calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 1
-			}
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 4
-			}
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 1
-		}
-		NOT = { has_active_policy = square_formations2 }
-	}
-
-	shock_damage_received = -0.1
-
-	ai_will_do = {
-		factor = 1.2		
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.28
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.38
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.45
-		}
-	}
-}
-
-#########################
-#Tier 2 Mil Policies    #
-#########################
-
-modern_siege_weapons = { #+20% Siege Ability
-	monarch_power = MIL
-
-	potential = {
-		adm_tech = 7
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
-		}
-	}
-
-	siege_ability = 0.2
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
-public_road_act = { #+75% Vassal forcelimit bonus
-	monarch_power = MIL
-
-	potential = {
-		adm_tech = 7
-		always = no
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
-		}
-	}
-
-	vassal_forcelimit_bonus = 0.75
-
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-army_tradition_from_battles_policy = { #0.5 Army tradition from battles
-	monarch_power = MIL
-
-	potential = {
-		adm_tech = 7
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
-		}
-	}
-
-	army_tradition_from_battle = 0.5
-
-	ai_will_do = {
-		factor = 1.2		
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.28
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.38
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.45
-		}
-	}
-}
-square_formations2  = { #-20% Shock Damage Received
-	monarch_power = MIL
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-		NOT = { has_active_policy = square_formations }
-	}
-
-	shock_damage_received = -0.20
-
-	ai_will_do = {
-		factor = 1.2		
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.28
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.38
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.45
-		}
-	}
-}
-
-mercenary_policy = { 
-	monarch_power = MIL
-
-	potential = {
-		adm_tech = 7
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
-		}
-	}
-
-		mercenary_manpower = 0.5
-		mercenary_cost = -0.25
 	
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { cavalry_fraction = 0.2 }
-		}			
-		modifier = {
-			factor = 1.5
-			cavalry_fraction = 0.28
-		}
-		modifier = {
-			factor = 1.5
-			cavalry_fraction = 0.38
-		}
-		modifier = {
-			factor = 1.5
-			cavalry_fraction = 0.45
-		}
-	}
-}
-
-#########################
-#Tier 3 Mil Policies    #
-#########################
-
-drill_policy = { #+50% Drill Gain
-	monarch_power = MIL
-
-	potential = {
-		adm_tech = 10
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-	}
-
-		drill_gain_modifier = 0.50
-	
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { cavalry_fraction = 0.2 }
-		}			
-		modifier = {
-			factor = 1.5
-			cavalry_fraction = 0.28
-		}
-		modifier = {
-			factor = 1.5
-			cavalry_fraction = 0.38
-		}
-		modifier = {
-			factor = 1.5
-			cavalry_fraction = 0.45
-		}
-	}
-}
-
-cannister_shot = { #Art shock
-	monarch_power = MIL
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 4
-			}
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-		NOT = { has_active_policy = cannister_shot2 }
-	}
-
-	artillery_shock = 0.50
-	
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { cavalry_fraction = 0.2 }
-		}			
-		modifier = {
-			factor = 1.5
-			cavalry_fraction = 0.28
-		}
-		modifier = {
-			factor = 1.5
-			cavalry_fraction = 0.38
-		}
-		modifier = {
-			factor = 1.5
-			cavalry_fraction = 0.45
-		}
-	}
-}
-
-
-superior_supply_system = { #+20% MPR
-	monarch_power = MIL
-
-	potential = {
-		adm_tech = 10
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-	}
-
-	manpower_recovery_speed = 0.2
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
-arty_power_policy1 = { #+10% Artillery combat ability
-	monarch_power = MIL
-
-	potential = {
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 4
-			}
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-		NOT = { has_active_policy = arty_power_policy2 }
-		NOT = { has_active_policy = arty_power_policy3 }
-	}
-
-	artillery_power = 0.1
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
-land_attrition_policy = { #-25% Land Attrition Policy
-	monarch_power = MIL
-
-	potential = {
-		adm_tech = 10
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-	}
-
-	land_attrition = -0.25
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
-reinforce_speed_policy = { #20% reinforcement speed
-	monarch_power = MIL
-
-	potential = {
-		adm_tech = 10
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-	}
-
-		reinforce_speed = 0.20
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
-#########################
-#Tier 4 Mil Policies    #
-#########################
-
-arty_power_policy2 = { #+15% Artillery combat ability
-	monarch_power = MIL
-
-	potential = {
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 5
-			}
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-		NOT = { has_active_policy = arty_power_policy1 }
-		NOT = { has_active_policy = arty_power_policy3 }
-	}
-
-	artillery_power = 0.15
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
-cannister_shot2 = { 
-	monarch_power = MIL
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-		NOT = { has_active_policy = cannister_shot }
-	}
-
-	artillery_shock = 1.0
-
-	ai_will_do = {
-		factor = 1.2		
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.28
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.38
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.45
-		}
-	}
-}
-
-new_pikes = { #+15% Fire damage
-	monarch_power = MIL
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 5
-			}
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-		NOT = { has_active_policy = new_pikes2 }
-	}
-
-	fire_damage = 0.15
-
-	ai_will_do = {
-		factor = 1.2		
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.28
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.38
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.45
-		}
-	}
-}
-
-new_shock = { #+15% shock damage
-	monarch_power = MIL
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 5
-			}
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-		NOT = { has_active_policy = new_shock2}
-	}
-
-	shock_damage = 0.15
-
-	ai_will_do = {
-		factor = 1.2		
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.28
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.38
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.45
-		}
-	}
-}
-
-land_leader_fire_policy = { #+1 Land Leader Fire
-	monarch_power = MIL
-
-	potential = {
-		adm_tech = 14
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-	}
-
 	leader_land_fire = 1
-
+	leader_naval_fire = 1
+	
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -635,310 +52,332 @@ land_leader_fire_policy = { #+1 Land Leader Fire
 	}
 }
 
-morale_taken_by_reserves_policy = { #-33% morale damage taken by reserves
+#Aristocratic-Dip
+
+noble_loyalty_act = {
 	monarch_power = MIL
 
 	potential = {
-		adm_tech = 7
+		has_idea_group = aristocracy_ideas
 	}
+	
 	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
+		full_idea_group = aristocracy_ideas
+		calc_true_if = { 
+			full_dip_group_scripted_trigger = yes 
+			amount = 1
 		}
 	}
 
-	reserves_organisation = 0.33
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
-#########################
-#Tier 5 Mil Policies    #
-#########################
-
-new_shock2 = { #+20% shock damage
-	monarch_power = MIL
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-		NOT = { has_active_policy = new_shock }
-	}
-
-	shock_damage = 0.20
-
-	ai_will_do = {
-		factor = 1.2		
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.28
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.38
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.45
-		}
-	}
-}
-
-new_pikes = { #+20% Fire damage
-	monarch_power = MIL
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-		NOT = { has_active_policy = new_pikes2 }
-	}
-
-	fire_damage = 0.20
-
-	ai_will_do = {
-		factor = 1.2		
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.28
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.38
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.45
-		}
-	}
-}
-
-arty_power_policy3 = { #+20% Artillery combat ability
-	monarch_power = MIL
-
-	potential = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 5
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-		NOT = { has_active_policy = arty_power_policy1 }
-		NOT = { has_active_policy = arty_power_policy2 }
-	}
-
-	artillery_power = 0.20
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
-new_pikes2 = { #+20% Fire damage
-	monarch_power = MIL
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-		NOT = { has_active_policy = new_pikes }
-	}
-
-	fire_damage = 0.20
-
-	ai_will_do = {
-		factor = 1.2		
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.28
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.38
-		}
-		modifier = {
-			factor = 1.5
-			infantry_fraction = 0.45
-		}
-	}
-}
-
-
-#########################
-#Tier 5 Mil Policies    #
-#########################
-
-pen_rely_on_sword_act = { #+25% FL
-	monarch_power = MIL
-
-	potential = {
-		adm_tech = 22
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-	}
-
-	land_forcelimit_modifier = 0.25
-
+	nobles_loyalty_modifier = 0.1
+	cavalry_power = 0.15
+	
 	ai_will_do = {
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { army_size_percentage = 0.9 }
+			NOT = { cavalry_fraction = 0.2 }
 		}			
 		modifier = {
 			factor = 1.5
-			army_size_percentage = 1.1
+			cavalry_fraction = 0.28
 		}
 		modifier = {
 			factor = 1.5
-			army_size_percentage = 1.5
+			cavalry_fraction = 0.38
 		}
 		modifier = {
 			factor = 1.5
-			army_size_percentage = 2
-		}
-		modifier = {
-			factor = 1.5
-			army_size_percentage = 2.5
+			cavalry_fraction = 0.45
 		}
 	}
 }
 
-artillery_bonus_forts_policy = { #+1 Artillerty bonus vs forts
+#Offensive-Dip
+
+grapeshot_policy = {
 	monarch_power = MIL
 
 	potential = {
-		adm_tech = 22
+		has_idea_group = offensive_ideas
 	}
+	
 	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
+		full_idea_group = offensive_ideas
+		calc_true_if = { 
+			full_dip_group_scripted_trigger = yes 
+			amount = 1
 		}
 	}
 
+	artillery_fire = 0.5
+	global_unrest = -1
+
+}
+
+#Espionage-Mil
+
+the_mercenary_registration_act = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = spy_ideas
+	}
+	
+	allow = {
+		full_idea_group = spy_ideas
+		calc_true_if = { 
+			full_mil_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}
+
+	mercenary_manpower = 0.50
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+#Statehood-Mil
+
+cantonment_system = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = statehood_ideas
+	}
+	
+	allow = {
+		full_idea_group = statehood_ideas
+		calc_true_if = { 
+			full_mil_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}
+
+	infantry_cost = -0.15
+	land_morale = 0.05
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+#Humanist-Mil
+
+superior_fortification_act = {
+	monarch_power = MIL
+	
+	potential = {
+		has_idea_group = humanist_ideas
+	}
+	
+	allow = {
+		full_idea_group = humanist_ideas
+		calc_true_if = { 
+			full_mil_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}
+	
+	fire_damage_received = -0.1
+
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+#Innovative-Mil
+
+modern_firearm_techniques = {
+	monarch_power = MIL
+	
+	potential = {
+		has_idea_group = innovativeness_ideas
+	}
+	
+	allow = {
+		full_idea_group = innovativeness_ideas
+		calc_true_if = { 
+			full_mil_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}
+	
+	infantry_power = 0.1
+
+	ai_will_do = {
+		factor = 1.2		
+		modifier = {
+			factor = 1.5
+			infantry_fraction = 0.28
+		}
+		modifier = {
+			factor = 1.5
+			infantry_fraction = 0.38
+		}
+		modifier = {
+			factor = 1.5
+			infantry_fraction = 0.45
+		}
+	}
+}
+
+#Religious-Mil
+
+field_priests = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = religious_ideas
+	}
+	
+	allow = {
+		full_idea_group = religious_ideas
+		calc_true_if = { 
+			full_mil_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}
+
+	land_morale = 0.1
+	recover_army_morale_speed = 0.05
+	
+	ai_will_do = {
+		factor = 1.2
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+#Infra-Mil
+
+mobile_siege_engines_act = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = infrastructure_ideas
+	}
+	
+	allow = {
+		full_idea_group = infrastructure_ideas
+		calc_true_if = { 
+			full_mil_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}
+
+	movement_speed = 0.05
 	artillery_levels_available_vs_fort = 1	
-
+	
 	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { army_size_percentage = 0.9 }
-		}			
+		factor = 1.2
 		modifier = {
 			factor = 1.5
-			army_size_percentage = 1.1
-		}
-		modifier = {
-			factor = 1.5
-			army_size_percentage = 1.5
-		}
-		modifier = {
-			factor = 1.5
-			army_size_percentage = 2
-		}
-		modifier = {
-			factor = 1.5
-			army_size_percentage = 2.5
+			is_at_war = yes
 		}
 	}
 }
 
-the_tenures_abolition_act = { #-15% Fire DMG received
+#Eco-Mil 
+
+the_best_defense_policy = { 
 	monarch_power = MIL
 
 	potential = {
-		adm_tech = 22
+		has_idea_group = economic_ideas
 	}
+	
 	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes			
-			amount = 5
+		full_idea_group = economic_ideas
+		calc_true_if = { 
+			full_mil_group_scripted_trigger = yes 
+			amount = 1
 		}
 	}
 
-	fire_damage_received = -0.15	
-
+	shock_damage_received = -0.05
+	fire_damage_received = -0.05
+	
 	ai_will_do = {
-		factor = 1
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
 	}
 }
 
+#Expansion-Mil
 
-banners_policy = { #+20% possible banners
+colonial_garrisons = {
 	monarch_power = MIL
 
 	potential = {
-		adm_tech = 18
-		num_of_banners = 1
+		has_idea_group = expansion_ideas
 	}
+	
 	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
+		calc_true_if = { 
+			full_mil_group_scripted_trigger = yes 
+			amount = 1
 		}
+		full_idea_group = expansion_ideas
 	}
 
-	amount_of_banners = 0.20
+	morale_damage = 0.15
 
 	ai_will_do = {
-		factor = 0.75
+		factor = 0.8
 		modifier = {
 			factor = 0
-			NOT = { army_tradition = 2 }
-		}			
-		modifier = {
-			factor = 1.5
-			army_tradition = 30
+			NOT = { num_of_colonists = 1 }
 		}
 		modifier = {
-			factor = 1.5
-			army_tradition = 50
-		}
-		modifier = {
-			factor = 1.5
-			army_tradition = 80
+			factor = 0.1
+			NOT = { num_of_colonies = 1 }
 		}
 	}
+}
+
+#Administrative-Mil
+
+the_provincial_taxation_system = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = administrative_ideas
+	}
+	
+	allow = {
+		full_idea_group = administrative_ideas
+		calc_true_if = { 
+			full_mil_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}
+	
+	land_maintenance_modifier = -0.1
+	manpower_recovery_speed = 0.15
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+	
 }

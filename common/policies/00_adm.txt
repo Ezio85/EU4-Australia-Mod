@@ -1,202 +1,303 @@
-#########################
-#Tier 1 Admin Policies  #
-#########################
+#Aristo-Adm
 
-the_liberation_act = { #-10years of separatism
+manueline_architecture = {
 	monarch_power = ADM
 
 	potential = {
+		has_idea_group = aristocracy_ideas
+	}
+	
+	allow = {
+		full_idea_group = aristocracy_ideas
+		calc_true_if = { 
+			full_adm_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}
+
+	build_cost = -0.15
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			is_at_war = yes
+		}
+	}
+}
+
+#Pluto-Adm
+
+mandatory_service = {
+	monarch_power = ADM
+	potential = {
+		has_idea_group = plutocracy_ideas
+	}
+	
+	allow = {
+		calc_true_if = { 
+			full_adm_group_scripted_trigger = yes 
+			amount = 1
+		}
+		full_idea_group = plutocracy_ideas
+	}
+	
+	reelection_cost = -0.10
+	legitimacy = 1.0
+	devotion = 1.0
+	horde_unity = 1.0
+	meritocracy = 0.5
+	may_recruit_female_generals = yes
+	female_advisor_chance = 0.25
+
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+#Offensive-Adm
+
+the_combination_act = {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = offensive_ideas
 	}
 	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
+		full_idea_group = offensive_ideas
+		calc_true_if = { 
+			full_adm_group_scripted_trigger = yes 
 			amount = 1
 		}
 	}
 	
-	years_of_nationalism = -10
+	production_efficiency = 0.20
 
 	ai_will_do = {
 		factor = 1
-		
 		modifier = {
-			factor = 1.5
-			average_effective_unrest = 2
-		}
-		modifier = {
-			factor = 1.5
-			average_effective_unrest = 4
+			factor = 0
+			NOT = { production_income_percentage = 0.1 }
 		}			
 		modifier = {
 			factor = 1.5
-			average_effective_unrest = 6
+			production_income_percentage = 0.2
 		}
 		modifier = {
 			factor = 1.5
-			average_effective_unrest = 8
+			production_income_percentage = 0.3
 		}
+		modifier = {
+			factor = 1.5
+			production_income_percentage = 0.4
+		}
+		modifier = {
+			factor = 1.5
+			production_income_percentage = 0.5
+		}		
 	}
 }
 
-the_foreign_aid_act = { #-50% Unjustified Demands
-	monarch_power = ADM
+#Defensive-Adm
 
+local_militias = {
+	monarch_power = MIL
+	
 	potential = {
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 1
-		}
+		has_idea_group = defensive_ideas
 	}
 	
-	unjustified_demands = -0.5
-
+	allow = {
+		calc_true_if = { 
+			full_adm_group_scripted_trigger = yes 
+			amount = 1
+		}
+		full_idea_group = defensive_ideas
+	}	
+	
+	war_exhaustion = -0.05
+	garrison_size = 0.25
+	
 	ai_will_do = {
-		factor = 0.9
+		factor = 1
 	}
 }
 
-black_chamber_act = { #+1 Diplomat
+#Trade-Adm
+
+the_statute_of_monopolies = {
 	monarch_power = ADM
 
 	potential = {
+		has_idea_group = trade_ideas
 	}
+	
 	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
+		full_idea_group = trade_ideas
+		calc_true_if = { 
+			full_adm_group_scripted_trigger = yes 
 			amount = 1
 		}
 	}
-	
-	diplomats = 1
 
-	ai_will_do = {
-		factor = 0.6
-	}
-}
+	production_efficiency = 0.1
+	trade_efficiency = 0.1
 
-the_pioneer_policy = { #+50% Native Assimilation + AutoExplore Adjacent Land
-	monarch_power = ADM
-
-	potential = {
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 1
-		}
-	}
-	
-	native_assimilation = 0.5
-	auto_explore_adjacent_to_colony = yes
-
-	ai_will_do = {
-		factor = 0.6
-	}
-}
-
-the_dissolution_act = { #-0.05 autonomy
-	monarch_power = ADM
-
-	potential = {
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 1
-		}
-	}
-	
-	global_autonomy = -0.05
 
 	ai_will_do = {
 		factor = 1
 		modifier = {
 			factor = 0.6
-			NOT = { average_autonomy_above_min = 1 }
-		}
-		modifier = {
-			factor = 1.5
-			average_autonomy_above_min = 20
-		}
-		modifier = {
-			factor = 1.5
-			average_autonomy_above_min = 40
+			NOT = { trade_income_percentage = 0.1 }
 		}			
 		modifier = {
 			factor = 1.5
-			average_autonomy_above_min = 60
+			trade_income_percentage = 0.2
 		}
 		modifier = {
 			factor = 1.5
-			average_autonomy_above_min = 80
+			trade_income_percentage = 0.3
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.4
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.5
+		}
+		
+		modifier = {
+			factor = 0.6
+			NOT = { production_income_percentage = 0.1 }
+		}			
+		modifier = {
+			factor = 1.5
+			production_income_percentage = 0.2
+		}
+		modifier = {
+			factor = 1.5
+			production_income_percentage = 0.3
+		}
+		modifier = {
+			factor = 1.5
+			production_income_percentage = 0.4
+		}
+		modifier = {
+			factor = 1.5
+			production_income_percentage = 0.5
 		}
 	}
 }
 
-reform_progress_policy = { #33% reform progress policy
+#Influence-Adm
+
+vassal_integration_act = {
+	monarch_power = ADM
+	
+	potential = {
+		has_idea_group = influence_ideas
+	}
+	
+	allow = {
+		full_idea_group = influence_ideas
+		calc_true_if = { 
+			full_adm_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}	
+	
+	diplomatic_annexation_cost = -0.2
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { vassal = 1 }
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 2
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 3
+		}			
+		modifier = {
+			factor = 1.5
+			vassal = 4
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 5
+		}			
+	}
+	
+}
+
+#Innovative-Dip
+
+the_banking_system = {
+	monarch_power = ADM
+
+
+	potential = {
+		has_idea_group = innovativeness_ideas
+	}
+	
+	allow = {
+		full_idea_group = innovativeness_ideas
+		calc_true_if = { 
+			full_dip_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}
+
+	interest = -0.25
+	trade_efficiency = 0.1
+
+
+	ai_will_do = {
+		factor = 1.5
+				
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.2
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.3
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.4
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.5
+		}
+	}
+}
+
+#Religious-Dip
+
+the_witchcraft_act = {
 	monarch_power = ADM
 
 	potential = {
+		has_idea_group = religious_ideas
 	}
+	
 	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
+		full_idea_group = religious_ideas
+		calc_true_if = { 
+			full_dip_group_scripted_trigger = yes 
 			amount = 1
 		}
 	}
 	
-	reform_progress_growth = 0.33
-
-	ai_will_do = {
-		factor = 0.6
-	}
-}
-
-the_licensing_of_the_press_act = { #+1legitimacy and other gov numbers
-	monarch_power = ADM
-
-	potential = {
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 1
-		}
-	}
-	
-	legitimacy = 1
-	republican_tradition = 0.2
-	devotion = 1
-	horde_unity = 1
-	meritocracy = 1
-
-	ai_will_do = {
-		factor = 0.8
-	}
-}
-
-#########################
-#Tier 2 Admin Policies  #
-#########################
-
-
-anti_heresy_act = { #+1Missionary and +2Missionary strenght
-	monarch_power = ADM
-
-	potential = {
-		adm_tech = 7
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
-		}
-	}
-	
-	global_missionary_strength = 0.02
-	missionaries = 1
+	global_unrest = -1
+	global_missionary_strength = 0.01
 
 	ai_will_do = {
 		factor = 1
@@ -219,641 +320,136 @@ anti_heresy_act = { #+1Missionary and +2Missionary strenght
 		modifier = {
 			factor = 1.5
 			NOT = { religious_unity = 0.2 }
+		}
+		
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 4
+		}			
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 6
+		}
+		modifier = {
+			factor = 1.5
+			average_effective_unrest = 8
+		}
+	}
+}
+
+#Infrastructure-Dip
+
+gentle_conquest_act = {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = infrastructure_ideas
+	}
+	
+	allow = {
+		full_idea_group = infrastructure_ideas
+		calc_true_if = { 
+			full_dip_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}
+	
+	land_maintenance_modifier = -0.1
+	global_monthly_devastation = -0.25
+
+}
+
+#Eco-Dip
+
+the_dissolution_act = {
+	monarch_power = ADM
+
+	potential = {
+		has_idea_group = economic_ideas
+	}
+	
+	allow = {
+		full_idea_group = economic_ideas
+		calc_true_if = { 
+			full_dip_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}
+	
+	global_tax_modifier = 0.10
+	global_autonomy = -0.05
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.6
+			NOT = { tax_income_percentage = 0.1 }
+		}			
+		modifier = {
+			factor = 1.5
+			tax_income_percentage = 0.2
+		}
+		modifier = {
+			factor = 1.5
+			tax_income_percentage = 0.3
+		}
+		modifier = {
+			factor = 1.5
+			tax_income_percentage = 0.4
+		}
+		modifier = {
+			factor = 1.5
+			tax_income_percentage = 0.5
+		}
+		
+		modifier = {
+			factor = 0.6
+			NOT = { average_autonomy_above_min = 1 }
+		}
+		modifier = {
+			factor = 1.5
+			average_autonomy_above_min = 20
+		}
+		modifier = {
+			factor = 1.5
+			average_autonomy_above_min = 40
+		}			
+		modifier = {
+			factor = 1.5
+			average_autonomy_above_min = 60
+		}
+		modifier = {
+			factor = 1.5
+			average_autonomy_above_min = 80
 		}	
 	}
 }
 
-vassal_integration_act = { #-10%Diplo Annex Cost and +2Dip Rep
+#Admin-Dip
+
+the_education_act = { 
 	monarch_power = ADM
 
 	potential = {
-		adm_tech = 7
+		has_idea_group = administrative_ideas
 	}
 	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
+		has_idea_group = administrative_ideas
+		calc_true_if = { 
+			full_dip_group_scripted_trigger = yes 
+			amount = 1
 		}
 	}
 	
-	diplomatic_annexation_cost = -0.1
-	diplomatic_reputation = 2
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { vassal = 1 }
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 2
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 3
-		}			
-		modifier = {
-			factor = 1.5
-			vassal = 4
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 5
-		}			
-	}
-}
-
-Innovativness_gain_policy = { #75% innovativness gain
-	monarch_power = ADM
-
-	potential = {
-		adm_tech = 7
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
-		}
-	}
-	
-	innovativeness_gain = 0.75
-
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-cultural_unity = { #-10% Culture Conversion Cost
-	monarch_power = ADM
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
-		}
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 3
-			}
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
-		}
-		NOT = { has_active_policy = cultural_unity2 }
-	}
-	
-	culture_conversion_cost = -0.20
-
-	ai_will_do = {
-		factor = 0.6
-	}
-}
-
-prosperity_policy = { #33% prosperity and -33% devastation
-	monarch_power = ADM
-
-	potential = {
-		adm_tech = 7
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
-		}
-	}
-	
-	global_prosperity_growth = 0.33
-	global_monthly_devastation = -0.33
-
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-#########################
-#Tier 3 Admin Policies  #
-#########################
-
-#harbour_administration = { #-10% CCR
-	#monarch_power = ADM
-#
-#	potential = {
-#		adm_tech = 10
-#	}
-#	allow = {
-#		calc_true_if = {
-#			full_idea_group = aristocracy_ideas
-#			full_idea_group = plutocracy_ideas
-#			full_idea_group = horde_gov_ideas
-#			full_idea_group = theocracy_gov_ideas
-#			full_idea_group = indigenous_ideas
-#			full_idea_group = innovativeness_ideas
-#			full_idea_group = religious_ideas
-#			full_idea_group = spy_ideas
-#			full_idea_group = diplomatic_ideas
-#			full_idea_group = offensive_ideas
-#			full_idea_group = defensive_ideas
-#			full_idea_group = trade_ideas
-#			full_idea_group = economic_ideas
-#			full_idea_group = exploration_ideas
-#			full_idea_group = maritime_ideas
-#			full_idea_group = quality_ideas
-#			full_idea_group = quantity_ideas
-#			full_idea_group = expansion_ideas
-#			full_idea_group = administrative_ideas
-#			full_idea_group = humanist_ideas
-#			full_idea_group = influence_ideas
-#			full_idea_group = modernization_ideas
-#			full_idea_group = logistic_ideas
-#			full_idea_group = bureaucratic_ideas
-#			full_idea_group = manufacturing_ideas
-#			full_idea_group = assimilation_ideas
-#			amount = 3
-#		}
-#	}
-#	
-#	core_creation = -0.1
-#
-#	ai_will_do = {
-#		factor = 1
-#	}
-#}
-
-diplomatic_cooperation_act = { #-10% Prov WS Cost
-	monarch_power = ADM
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 5
-			}
-		}
-		always = no
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-		NOT = { has_active_policy = diplomatic_cooperation_act2 }
-	}
-	
-	province_warscore_cost = -0.1
-
-	ai_will_do = {
-		factor = 0.7
-	}
-}
-
-visionary_thinkers = { #+1 prestige
-	monarch_power = ADM
-
-	potential = {
-		adm_tech = 10
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-	}
-	
-	prestige = 1
-
-	ai_will_do = {
-		factor = 0.6
-	}
-}
-
-liberty_desire_policy = { #-25 liberty desire policy
-	monarch_power = ADM
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 5
-			}
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-		NOT = { has_active_policy = liberty_desire_policy2 }
-	}
-	
-	liberty_desire = -25
-
-	ai_will_do = {
-		factor = 0.6
-	}
-}
-
-exchange_of_ideas2 = { #-5% Idea/Tech cost
-	monarch_power = ADM
-
-	potential = {
-		adm_tech = 10
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-	}
-	
-	idea_cost = -0.05
-	technology_cost = -0.05
-
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-cultural_unity2 = { #-20% Culture Conversion Cost
-	monarch_power = ADM
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-		NOT = { has_active_policy = cultural_unity }
-	}
-	
-	culture_conversion_cost = -0.20
-
-	ai_will_do = {
-		factor = 0.6
-	}
-}
-
-the_banking_system = { #-25% Inflation Cost
-	monarch_power = ADM
-
-	potential = {
-		adm_tech = 10
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-	}
-	
-	inflation_action_cost = -0.25
-
-	ai_will_do = {
-		factor = 0.85
-		modifier = {
-			factor = 1.5
-			inflation = 5
-		}
-		modifier = {
-			factor = 1.5
-			inflation = 10
-		}
-	}
-}
-
-#########################
-#Tier 4 Admin Policies  #
-#########################
-
-professional_diplomatic_corps = { #-0.1 war exhaustion
-	monarch_power = ADM
-
-	potential = {
-		adm_tech = 14
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-	}
-	
-	war_exhaustion = -0.10
-
-	ai_will_do = {
-		factor = 0.7
-	}
-}
-
-the_integrated_administration_act = { #+20% Gov Cap
-	monarch_power = ADM
-
-	potential = {
-		adm_tech = 14
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-	}
-	
-	governing_capacity_modifier = 0.20
+	free_mil_policy = 1
+	possible_mil_policy = 1
 
 	ai_will_do = {
 		factor = 0.8
 	}
 }
 
-the_court_of_wards_and_liveries = { #+2 Yearly Abso
-	monarch_power = ADM
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 5
-			}
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-		NOT = { has_active_policy = the_court_of_wards_and_liveries2 }
-	}
-	
-	yearly_absolutism = 2
-
-	ai_will_do = {
-		factor = 0.7
-	}
-}
-
-power_projection_insults_policy = { #100% PP from insults
-	monarch_power = ADM
-
-	potential = {
-		adm_tech = 14
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-	}
-	
-	power_projection_from_insults = 1
-
-	ai_will_do = {
-		factor = 0.7
-	}
-}
-
-the_court_of_wards_and_liveries = { #+2 Yearly Abso
-	monarch_power = ADM
-
-	potential = {
-		adm_tech = 14
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-	}
-	
-	yearly_absolutism = 2
-
-	ai_will_do = {
-		factor = 0.7
-	}
-}
-
-#########################
-#Tier 5 Admin Policies  #
-#########################
-
-liberty_desire_policy2 = { #-50 liberty desire policy
-	monarch_power = ADM
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-		NOT = { has_active_policy = liberty_desire_policy }
-	}
-	
-	liberty_desire = -50
-
-	ai_will_do = {
-		factor = 0.6
-	}
-}
-
-move_capital_policy = { #-50% Move capital cost
-	monarch_power = ADM
-
-	potential = {
-		adm_tech = 18
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-	}
-	
-	move_capital_cost_modifier = -0.5
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { vassal = 1 }
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 2
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 3
-		}			
-		modifier = {
-			factor = 1.5
-			vassal = 4
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 5
-		}			
-	}
-}
-
-expand_administration_policy = { #-33% expand administration cost
-	monarch_power = ADM
-
-	potential = {
-		adm_tech = 18
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-	}
-	
-	expand_administration_cost = -0.33
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { vassal = 1 }
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 2
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 3
-		}			
-		modifier = {
-			factor = 1.5
-			vassal = 4
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 5
-		}			
-	}
-}
-
-the_court_of_wards_and_liveries2 = { #+4 yearly absolutism
-	monarch_power = ADM
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 4
-			}
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-		NOT = { has_active_policy = the_court_of_wards_and_liveries }
-	}
-	
-	expand_administration_cost = -0.33
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { vassal = 1 }
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 2
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 3
-		}			
-		modifier = {
-			factor = 1.5
-			vassal = 4
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 5
-		}			
-	}
-}
-
-diplomatic_cooperation_act2 = { #-20% Warscore cost
-	monarch_power = ADM
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-		NOT = { has_active_policy = diplomatic_cooperation_act }
-	}
-	
-	province_warscore_cost = -0.20
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { vassal = 1 }
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 2
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 3
-		}			
-		modifier = {
-			factor = 1.5
-			vassal = 4
-		}
-		modifier = {
-			factor = 1.5
-			vassal = 5
-		}			
-	}
-}
-
-#########################
-#Tier 6 Admin Policies  #
-#########################

@@ -27,4 +27,6 @@
  horde_statehood_policy:0 "Horde-Statehood Policy"
  statehood_inno_policy:0 "Statehood-Innovative Policy"
  statehood_eco_policy:0 "Statehood-Economic Policy"
+ grapeshot_policy:0 "Riot Control Act"
+ gentle_conquest_act:0 "Gentle Conquest"
  

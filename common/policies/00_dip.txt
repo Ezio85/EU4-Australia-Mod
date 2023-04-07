@@ -1,223 +1,135 @@
-#########################
-#Tier 1 Diplo Policies  #
-#########################
+#Espionage-Adm
 
-trade_kontor_network = { #-7.5% regiment cost
+the_espionage_act = {
 	monarch_power = DIP
 
-	potential = {
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 1
-		}
-	}
-
-	global_regiment_cost = -0.075
-
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-may_explore_policy = { #May Explore
-	monarch_power = DIP
 
 	potential = {
-		NOT = {
-			has_idea_group = expansion_ideas
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 1
-		}
+		has_idea_group = spy_ideas
 	}
 	
-	may_explore = yes
-
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-naval_infrastructure_act = { #+15% Sailors Recovery
-	monarch_power = DIP
-
-	potential = {
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 2
-			}
-		}
-	}
 	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
+		calc_true_if = { 
+			full_adm_group_scripted_trigger = yes 
 			amount = 1
 		}
-		NOT = { has_active_policy = naval_infrastructure_act2 }
+		full_idea_group = spy_ideas
 	}
-	
-	sailors_recovery_speed = 0.15
 
+	stability_cost_modifier = -0.25
+	diplomats = 1
+	
 	ai_will_do = {
 		factor = 0.6
+	}
+}
+
+#Statehood-Adm
+
+the_preparation_act = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = statehood_ideas
+	}
+	
+	allow = {
+		full_idea_group = statehood_ideas
+		calc_true_if = { 
+			full_adm_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}	
+	
+	land_attrition = -0.25
+	war_exhaustion = -0.05
+	
+	ai_will_do = {
+		factor = 0.9
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+#Maritime-Adm
+
+trained_marines_act = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = maritime_ideas
+	}
+	
+	allow = {
+		full_idea_group = maritime_ideas
+		calc_true_if = { 
+			full_adm_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}
+	
+	naval_morale = 0.15
+
+	ai_will_do = {
+		factor = 1
 		modifier = {
 			factor = 0
 			NOT = { navy_size = 20 }
 		}
-		modifier = {
-			factor = 1.5
-			navy_size = 50
-		}
-		modifier = {
-			factor = 1.5
-			navy_size = 100
-		}			
-		modifier = {
-			factor = 1.5
-			navy_size = 150
-		}
-		modifier = {
-			factor = 1.5
-			navy_size = 200
-		}		
-	}	
+	}
 }
 
-formalized_measures = { #+10% Tax
+#Humanist-Admin
+
+render_unto_caesar_policy = { 
 	monarch_power = DIP
 
 	potential = {
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 2
-			}
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 1
-		}
-		NOT = { has_active_policy = formalized_measures2 }
-		NOT = { has_active_policy = formalized_measures3 }
-		NOT = { has_active_policy = formalized_measures4 }
+		has_idea_group = humanist_ideas
 	}
 	
-	global_tax_modifier = 0.10
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0.75
-			NOT = { tax_income_percentage = 0.25 }
-		}			
-		modifier = {
-			factor = 1.5
-			tax_income_percentage = 0.45
-		}
-		modifier = {
-			factor = 1.5
-			tax_income_percentage = 0.7
-		}
-	}
-}
-
-colonial_administration_act = { #+1Colonist +20 Colony Growth
-	monarch_power = DIP
-
-	potential = {
-		NOT = {
-			has_idea_group = expansion_ideas
-		}
-	}
 	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
+		full_idea_group = humanist_ideas
+		calc_true_if = { 
+			full_adm_group_scripted_trigger = yes 
 			amount = 1
 		}
-		
 	}
-	
-	colonists = 1
-	global_colonial_growth = 20
+
+	province_warscore_cost = -0.1
 
 	ai_will_do = {
-		factor = 1
+		factor = 1.0
 		modifier = {
-			factor = 0
-			NOT = { num_of_colonists = 1 }
-		}
-		modifier = {
-			factor = 0.1
-			NOT = { num_of_colonies = 1 }
+			factor = 1.5
+			is_at_war = yes
 		}
 	}
 }
 
-#########################
-#Tier 2 Diplo Policies  #
-#########################
+#Pluto-Dip
 
-trade_connection_policy = { #+1 Merchant
+trade_kontor_network = {
 	monarch_power = DIP
-
 	potential = {
-		adm_tech = 7
+		has_idea_group = plutocracy_ideas
 	}
+	
 	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
+		full_idea_group = plutocracy_ideas
+		calc_true_if = { 
+			full_dip_group_scripted_trigger = yes 
+			amount = 1
 		}
 	}
 	
 	merchants = 1
-
-	ai_will_do = {		
-		factor = 0.8		
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.5
-		}
-	}
-}
-
-beneficial_neglect = { #+20% Domestic Trade Power
-	monarch_power = DIP
-
-	potential = {
-		adm_tech = 7
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
-		}
-	}
-	
-	global_own_trade_power = 0.2
+	global_regiment_cost = -0.1
 
 	ai_will_do = {
-		factor = 1	
+		factor = 0.6
 		modifier = {
 			factor = 0
 			NOT = { trade_income_percentage = 0.1 }
@@ -238,155 +150,144 @@ beneficial_neglect = { #+20% Domestic Trade Power
 			factor = 1.5
 			trade_income_percentage = 0.5
 		}
-
 	}
 }
 
-naval_infrastructure_act2 = { #+30% Sailor recovery speed
+#Quality-Dip
+
+the_importation_act = {
 	monarch_power = DIP
 
 	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
-		}
+		has_idea_group = quality_ideas
 	}
 	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
+		full_idea_group = quality_ideas
+		calc_true_if = { 
+			full_dip_group_scripted_trigger = yes 
+			amount = 1
 		}
-		NOT = { has_active_policy = naval_infrastructure_act }
 	}
 	
-	sailors_recovery_speed = 0.3
+	trade_efficiency = 0.20
+	
+	ai_will_do = {
+		factor = 1.2
+		modifier = {
+			factor = 0
+			NOT = { trade_income_percentage = 0.1 }
+		}			
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.2
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.3
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.4
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.5
+		}
+	}
+}
+
+#Quantity-Dip
+
+production_quota_act = {
+	monarch_power = DIP
+	potential = {
+		has_idea_group = quantity_ideas
+	}
+	
+	allow = {
+		full_idea_group = quantity_ideas
+		calc_true_if = { 
+			full_dip_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}
+	global_trade_goods_size_modifier = 0.2
+ 
+
+	ai_will_do = {
+		factor = 0.7
+	}
+}
+
+#Defensive-Dip
+
+armed_neutrality_act = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = defensive_ideas
+	}
+	
+	allow = {
+		full_idea_group = defensive_ideas
+		calc_true_if = { 
+			full_dip_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}
+	
+	trade_steering = 0.25
+	merchants = 1
 
 	ai_will_do = {
 		factor = 0.6
 		modifier = {
-			factor = 0
-			NOT = { navy_size = 20 }
-		}
-		modifier = {
-			factor = 1.5
-			navy_size = 50
-		}
-		modifier = {
-			factor = 1.5
-			navy_size = 100
+			factor = 0.6
+			NOT = { trade_income_percentage = 0.1 }
 		}			
 		modifier = {
 			factor = 1.5
-			navy_size = 150
+			trade_income_percentage = 0.2
 		}
 		modifier = {
 			factor = 1.5
-			navy_size = 200
-		}	
-	}
-}
-
-formalized_measures2 = { #+15% Tax
-	monarch_power = DIP
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
-		}
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 3
-			}
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
-		}
-		NOT = { has_active_policy = formalized_measures }
-		NOT = { has_active_policy = formalized_measures3 }
-		NOT = { has_active_policy = formalized_measures4 }
-	}
-	
-	global_tax_modifier = 0.15
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0.75
-			NOT = { tax_income_percentage = 0.25 }
-		}			
-		modifier = {
-			factor = 1.5
-			tax_income_percentage = 0.45
+			trade_income_percentage = 0.3
 		}
 		modifier = {
 			factor = 1.5
-			tax_income_percentage = 0.7
+			trade_income_percentage = 0.4
+		}
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.5
 		}
 	}
 }
 
-vassal_income = { #75% Vassal income
-	monarch_power = DIP
+#Trade-Mil
 
+public_road_act = {
+	monarch_power = DIP
+	
 	potential = {
-		adm_tech = 7
+		has_idea_group = trade_ideas
 	}
+	
 	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 2
+		full_idea_group = trade_ideas
+		calc_true_if = { 
+			full_mil_group_scripted_trigger = yes 
+			amount = 1
 		}
 	}
 	
-	vassal_income = 0.5
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { num_of_colonists = 1 }
-		}
-		modifier = {
-			factor = 0.1
-			NOT = { num_of_colonies = 1 }
-		}
-	}
-}
-
-#########################
-#Tier 3 Diplo Policies  #
-#########################
-
-the_importation_act = { #10% Trade Eff
-	monarch_power = DIP
-
-	potential = {
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 4
-			}
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-		NOT = { has_active_policy = the_importation_act2 }
-	}
-	
+	movement_speed = 0.10
 	trade_efficiency = 0.10
 
 	ai_will_do = {
-		factor = 1.2
+		factor = 1
 		modifier = {
-			factor = 0
+			factor = 0.6
 			NOT = { trade_income_percentage = 0.1 }
 		}			
 		modifier = {
@@ -408,442 +309,76 @@ the_importation_act = { #10% Trade Eff
 	}
 }
 
-the_combination_act = { #+10% Production Eff
-	monarch_power = DIP
+#Maritime-Mil
 
+new_naval_tactis = {
+	monarch_power = DIP
 	potential = {
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 4
-			}
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-		NOT = { has_active_policy = the_combination_act2 }
+		has_idea_group = maritime_ideas
 	}
 	
-	production_efficiency = 0.1
+	allow = {
+		full_idea_group = maritime_ideas
+		calc_true_if = { 
+			full_mil_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}
+
+	leader_naval_manuever = 1
+	heavy_ship_power = 0.1
+
 
 	ai_will_do = {
 		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { production_income_percentage = 0.1 }
-		}			
-		modifier = {
-			factor = 1.5
-			production_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 1.5
-			production_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 1.5
-			production_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.5
-			production_income_percentage = 0.5
-		}		
-	}
-}
-
-the_education_act = { #-10% Advisor Cost
-	monarch_power = DIP
-
-	potential = {
-		adm_tech = 10
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-	}
-	
-	advisor_cost = -0.1
-
-	ai_will_do = {
-		factor = 0.8
-	}
-}
-
-global_tariffs = { #20% global tariffs and cost to increase tariffs
-	monarch_power = DIP
-
-	potential = {
-		adm_tech = 7
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-	}
-	
-	global_tariffs = 0.20
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { num_of_colonists = 1 }
-		}
-		modifier = {
-			factor = 0.1
-			NOT = { num_of_colonies = 1 }
-		}
-	}
-}
-
-formalized_measures3 = { #+20% Tax
-	monarch_power = DIP
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-		NOT = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-			
-				amount = 5
-			}
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-		NOT = { has_active_policy = formalized_measures }
-		NOT = { has_active_policy = formalized_measures2 }
-		NOT = { has_active_policy = formalized_measures4 }
-	}
-	
-	global_tax_modifier = 0.2
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0.75
-			NOT = { tax_income_percentage = 0.25 }
-		}			
-		modifier = {
-			factor = 1.5
-			tax_income_percentage = 0.45
-		}
-		modifier = {
-			factor = 1.5
-			tax_income_percentage = 0.7
-		}
-	}
-}
-
-great_projects_upgrade_cost = { #-25% cost to upgrade great project
-	monarch_power = DIP
-
-	potential = {
-		adm_tech = 7
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 3
-		}
-	}
-	
-	great_project_upgrade_cost = -0.25
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { num_of_colonists = 1 }
-		}
-		modifier = {
-			factor = 0.1
-			NOT = { num_of_colonies = 1 }
-		}
-	}
-}
-
-#########################
-#Tier 4 Diplo Policies  #
-#########################
-
-production_quota_act = { #+10% Trade Goods
-	monarch_power = DIP
-
-	potential = {
-		adm_tech = 14
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-	}
-	
-	global_trade_goods_size_modifier = 0.1
-
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-the_provincial_taxation_system = { #-15% Ship Cost 
-	monarch_power = DIP
-
-	potential = {
-		adm_tech = 14
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-	}
-	
-	global_ship_cost = -0.15
-
-	ai_will_do = {		
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
-the_combination_act2 = { #+20% Production Eff
-	monarch_power = DIP
-
-	potential = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 4
-			}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-		NOT = { has_active_policy = the_combination_act }
-	}
-	
-	production_efficiency = 0.20
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { production_income_percentage = 0.1 }
-		}			
-		modifier = {
-			factor = 1.5
-			production_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 1.5
-			production_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 1.5
-			production_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.5
-			production_income_percentage = 0.5
-		}		
-	}
-}	
-
-#########################
-#Tier 5 Diplo Policies  #
-#########################
-
-formalized_measures4 = { #+25% Tax
-	monarch_power = DIP
-
-	potential = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-		NOT = { has_active_policy = formalized_measures }
-		NOT = { has_active_policy = formalized_measures2 }
-		NOT = { has_active_policy = formalized_measures3 }
-	}
-	
-	global_tax_modifier = 0.25
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0.75
-			NOT = { tax_income_percentage = 0.25 }
-		}			
-		modifier = {
-			factor = 1.5
-			tax_income_percentage = 0.45
-		}
-		modifier = {
-			factor = 1.5
-			tax_income_percentage = 0.7
-		}
-	}
-}
-
-land_maintenance_policy = { #-10% Land Maintenance
-	monarch_power = DIP
-
-	potential = {
-		adm_tech = 14
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 4
-		}
-	}
-	
-	land_maintenance_modifier = -0.10
-
-	ai_will_do = {		
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_at_war = yes
-		}
-	}
-}
-
-#########################
-#Tier 5 Diplo Policies  #
-#########################
-
-the_importation_act2 = { #15% Trade Eff
-	monarch_power = DIP
-
-	potential = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 5
-			}
-		}
-		allow = {
-			calc_true_if = {
-				has_filled_ideas_trigger = yes
-				amount = 5
-			}
-			NOT = { has_active_policy = the_importation_act}
-		}
-	trade_efficiency = 0.15
-
-	ai_will_do = {
-		factor = 1.2
-		modifier = {
-			factor = 0
-			NOT = { trade_income_percentage = 0.1 }
-		}			
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.5
-		}
-	}
-}
-
-foreign_conscription_centers = { #-15% Reinforce Cost
-	monarch_power = DIP
-
-	potential = {
-		adm_tech = 18
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 5
-		}
-	}
-	
-	reinforce_cost_modifier = -0.1
-
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-#########################
-#Tier 6 Diplo Policies  #
-#########################
-
-the_liquor_act = { #+15% Reinforce Speed
-	monarch_power = DIP
-
-	potential = {
-		adm_tech = 22
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 6
-		}
-	}
-	
-	reinforce_speed = 0.15
-
-	ai_will_do = {
-		factor = 0.6
-	}
-}
-
-the_naval_supremacy_act = { #-20% Naval Maintenance
-	monarch_power = DIP
-
-	potential = {
-		adm_tech = 22
-	}
-	allow = {
-		calc_true_if = {
-			has_filled_ideas_trigger = yes
-			amount = 6
-		}
-	}
-	
-	naval_maintenance_modifier = -0.20
-
-	ai_will_do = {
-		factor = 0.6
 		modifier = {
 			factor = 0
 			NOT = { navy_size = 20 }
-		}	
+		}
+	}
+}
+
+#Influence-Mil
+
+vassal_obligations_act = {
+	monarch_power = DIP
+	
+	potential = {
+		has_idea_group = influence_ideas
+	}
+	
+	allow = {
+		full_idea_group = influence_ideas
+		calc_true_if = { 
+			full_mil_group_scripted_trigger = yes 
+			amount = 1
+		}
+	}	
+	
+	vassal_income = 0.25
+	vassal_forcelimit_bonus = 0.5
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { vassal = 1 }
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 2
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 3
+		}			
+		modifier = {
+			factor = 1.5
+			vassal = 4
+		}
+		modifier = {
+			factor = 1.5
+			vassal = 5
+		}			
 	}
 }
