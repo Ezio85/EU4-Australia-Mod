@@ -11,25 +11,6 @@ categories =  {
 		type = pti
 	}
 
-	dover_terrain = {
-		color = { 235 235 235 }
-
-		type = hills
-		sound_type = plains
-
-		defence = 1
-		movement_cost = 1.25
-		supply_limit = 10	
-		allowed_num_of_buildings = 1
-		local_defensiveness = 0.1	
-		
-			
-		
-		terrain_override = {		
-			235
-		}
-	}
-
 	ocean = {
 		color = { 255 255 255 }
 
@@ -130,11 +111,11 @@ categories =  {
 			
 			43 97 98 100 4382 4383 #Netherlands
 			
-			234  236 238 4367 4368 4371 4375 #British isles
+			234 235 236 238 4367 4368 4371 4375 #British isles
 			
 			358 359 361 363 2316 4316 #Egypt
 			
-			264 4126 4173 4240 #Central Europe #Minus Krakow
+			262 264 4126 4173 4240 #Central Europe
 			
 			4194 4195 4196 4197 4212 4213 #Greater China
 			1020 1021 1028 1030 #Japan
@@ -194,7 +175,6 @@ categories =  {
 		supply_limit = 5
 		
 		terrain_override = {
-			144 #Yanya
 			508 509 511 515 525 527 530 545 550 554 557 1947 2036 
 			2037 2040 2043 2056 2058 2069 2070 2071 2080 2090 2092 2097
 			
@@ -215,10 +195,7 @@ categories =  {
 			193 201 102 198 176 196 203 325
 			101
 			140 1828
-			#Made Lucania Grasslands 1934
-			123  116 119 1848
-			#Salento now hills
-			122
+			123 1934 116 119 1848
 			
 			669 670 681 686 1824 1829 1833 1840
 			2146 2147 2152 2153 2158 2171 2173 2174 
@@ -338,7 +315,6 @@ categories =  {
 		supply_limit = 4
 		
 		terrain_override = {
-			142 #Corfu
 			210	226 # Spain
 			139 1831 143 138 4175  #Balkans
 			158 1952 #Hungary
@@ -361,8 +337,8 @@ categories =  {
 			785 
 			2564
 			204 199 
-			1853 #144 moved tr hills
-			124
+			1853 144
+			#124
 			2305 331 2306 
 			
 			2327 380 383
@@ -416,7 +392,6 @@ categories =  {
 		nation_designer_cost_multiplier = 1
 		
 		terrain_override = {
-			1934 #Lucania
 			2666 # North America
 			213 218 219 #Spain
 			526 #India
@@ -607,6 +582,7 @@ categories =  {
 		supply_limit = 6 
 		
 		terrain_override = {
+			4954
 			957 962 2554 2561 2578 #n am
 			
 			112
@@ -704,7 +680,7 @@ categories =  {
 			2303
 			2478 2489 2504 	 
 			252 784 2946 823
-			1773 127 1247
+			1773 #127 1247
 			1766
 			319 2298 
 			371 163 321

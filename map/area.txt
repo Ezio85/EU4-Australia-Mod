@@ -372,7 +372,7 @@ flanders_area = { #3
 }
 
 frisia_area = { #5
-	99 100  4381 4382
+	99 100 1931 4381 4382
 }
 
 brabant_area = { #3
@@ -457,67 +457,93 @@ macaronesia_area = { #3
 ########################################
 # Italy					 			   #
 ########################################
-
-venetia_area = { #5
-	108 111 112 1774 4729
+istria_area = {
+	130 4738 4990
 }
-
+venetia_area = { #5
+	112 1774 4729 4991
+}
+aquilea_area = { 
+	111 4986 4987 4988
+}
 lombardy_area = { #5
-	104 1862 4728 4740 2979
+	104 4728 4740 4982
 }
 
 po_valley_area = { #3
 	color = { 205 190 47 }
-	109 4739 107
+	109 1862 4739
 }
-
+venice_po_valley_area = {
+	107 108 4984 4985
+}
 piedmont_area = { #4
-	103 1875 2981 4727
+	103 4727 4977 4978 4979
 }
-
-tuscany_area = { #5
-	115 116 117 2978 2980
+piedmont_po_valley_area = {
+	2979 4975 4976 4980 4981
 }
-
 liguria_area = { #3
-	101 102 2992
+	101 105 4972 4973 4974
 }
 
-corsica_sardinia_area = { #4
-	127 1247 2986 4735
+west_liguria_area = {
+	102 1875 2981 2992
+}
+corsica_sardinia_area = { #4 Sardinia Only
+	127 2986 4735 4949 4950
 }
 
 sicily_area = { #3 # now Eastern Sicily
-	124 126 2982
+	124 126 2982 4944 4945
 }
 
 western_sicily_area = { #3
-	125 4736 4737
+	125 4736 4737 4942 4943
+}
+
+#MOD
+tuscany_area = { #5
+	116 117 2978 4968 4970
+}
+lower_tuscany_area = {
+	2980 115 4954 4966 4967
+}
+central_sicily_area = {
+	4946 4947 4948 
+}
+marche_area = {
+	113 114 119 2977 
+}
+corsica_area = {
+	1247 4951 4952 4953
 }
 
 naples_area = { #3  #Campania
-	121 2983 4734
+	121 2983 4732 4963
 }
 
 lazio_area = { #4 Lazio-Umbria
-	118 2976 4731 4732
+	118 2976 4731 4964 4965
 }
 
 calabria_area = { #3 (+Lucania)
-	123 1934 2984
+	123 1934 2984 4955 4957
 }
 
 apulia_area = { #4
-	122 1933 2985 4733
+	122 1933 4956 4958
 }
-
+north_apulia_area = {
+	2985 4959 4960 4961
+}
 emilia_romagna_area = { #5
 	color = { 24 222 66 }
-	105 106 113 114 4730
+	106 4730 4969 4971 4983
 }
 
 central_italy_area = { #3
-	119 120 2977
+	120 4733 4734 4962
 }
 
 ########################################
@@ -985,7 +1011,7 @@ inner_austria_area = { #4
 
 carinthia_area = { #4 # Carniola in-game
 	color = { 46 217 110 }
-	129 130 1769 4738 4751
+	129 1769 4751 4989
 }
 
 switzerland_area = { #4
@@ -1033,7 +1059,7 @@ braunschweig_area = { #4
 }
    
 weser_area = { #4
-	54 55 1874 4771 1931
+	54 55 1874 4771
 }
 
 holstein_area = { #3

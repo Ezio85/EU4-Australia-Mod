@@ -11,3 +11,13 @@
  trade_company_thrace:0 "Aegean Charter"
  TRADE_COMPANY_THRACE_Root_Culture_GetName:0 "[Root.Culture.GetName] Aegean Trade Company"
  TRADE_COMPANY_THRACE_European_Trade_Company:0 "Aegean Trade Company"
+ ###
+ trade_company_firenze:0 "Firenze Charter"
+ TRADE_COMPANY_FIRENZE_Root_Culture_GetName:0 "[Root.Culture.GetName] Firenze Trade Company"
+ TRADE_COMPANY_FIRENZE_European_Trade_Company:0 "Firenze Trade Company"
+ trade_company_napoli:0 "Neapolitan Charter"
+ TRADE_COMPANY_NAPOLI_Root_Culture_GetName:0 "[Root.Culture.GetName] Neapolitan Trade Company"
+ TRADE_COMPANY_NAPOLI_European_Trade_Company:0 "Neapolitan Trade Company"
+ trade_company_venice:0 "Venetian Charter"
+ TRADE_COMPANY_VENICE_Root_Culture_GetName:0 "[Root.Culture.GetName] Venetian Trade Company"
+ TRADE_COMPANY_VENICE_European_Trade_Company:0 "Venetian Trade Company"
