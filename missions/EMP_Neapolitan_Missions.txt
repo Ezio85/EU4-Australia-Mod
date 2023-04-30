@@ -107,6 +107,8 @@ emp_naples_2 = {
 			OR = {
 				area = lazio_area
 				area = tuscany_area
+				area = lower_tuscany_area #New State
+				province_id = 4732 #4732
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -119,6 +121,15 @@ emp_naples_2 = {
 				value = 3
 				area = lazio_area
 			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				area = lower_tuscany_area
+			}
+			4732 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
+			
 		}
 		effect = {
 			central_italy_area = {
@@ -256,6 +267,23 @@ emp_naples_3 = {
 				add_core = ROOT
 			}
 			lazio_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { province_id = 4965 } #Vatican
+				}
+				add_permanent_claim = ROOT
+			}
+			#New Provinces
+
+			4732 = { #Terracina
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_tuscany_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
