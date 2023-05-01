@@ -607,6 +607,14 @@ hab_protect_the_balkans = {
 				}
 				add_permanent_claim = ROOT
 			}
+			#New States
+			aquilea_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	conquer_transylvania = {
@@ -703,7 +711,10 @@ hab_italian_ambitions = {
 
 		required_missions = { austrian_croatia }
 		provinces_to_highlight = {
-			area = venetia_area
+			OR = {
+				area = venetia_area
+				area = aquilea_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -711,10 +722,20 @@ hab_italian_ambitions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			aquilea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_mercantilism = 5
 			venetia_area = {
+				add_province_modifier = {
+					name = "protected_italian_interests"
+					duration = 3650
+				}
+			}
+			aquilea_area = {
 				add_province_modifier = {
 					name = "protected_italian_interests"
 					duration = 3650
