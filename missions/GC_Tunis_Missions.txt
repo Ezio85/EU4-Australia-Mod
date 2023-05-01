@@ -354,6 +354,21 @@ gc_tunis_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			#New States
+			corsica_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			central_sicily_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			341 = {
 				add_unit_construction = {
 					type = galley
@@ -372,11 +387,9 @@ gc_tunis_3 = {
 			OR = {
 				area = sicily_area
 				area = western_sicily_area
-				#area = corsica_sardinia_area
+				area = corsica_sardinia_area
 				#area = baleares_area
-				province_id = 4735 #Arborea
-				province_id = 2986 #Cagliari
-				province_id = 127 #Sassari
+				area = central_sicily_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -390,19 +403,14 @@ gc_tunis_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			4735 = { #Arborea
+			central_sicily_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			2986 = { #Cagliari
+			corsica_sardinia_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			127 = { #Sassari
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			#corsica_sardinia_area = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
 			#baleares_area = {
 			#	type = all
 			#	country_or_non_sovereign_subject_holds = ROOT
