@@ -495,27 +495,6 @@ hab_protect_the_balkans = {
 				}
 				add_permanent_claim = ROOT
 			}
-			slovakia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-				}
-				add_core = ROOT
-				remove_claim = ROOT
-			}
-			transdanubia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-				}
-				add_core = ROOT
-				remove_claim = ROOT
-			}
-			alfold_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-				}
-				add_core = ROOT
-				remove_claim = ROOT
-			}
 			add_country_modifier = {
 				name = "royal_hungary"
 				duration = 5475
