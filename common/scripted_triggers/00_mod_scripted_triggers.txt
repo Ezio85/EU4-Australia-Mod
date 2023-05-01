@@ -172,8 +172,8 @@ has_strait_scripted_trigger = {
 			province_id = 2728 	#Tiwi 2
 			province_id = 4846	#Woolna 2
 		#mod straits
-			province_id = 235	#Kent
-			province_id = 87	#Calais
+			#province_id = 235	#Kent
+			#province_id = 87	#Calais
 			province_id = 341 	#Tunis
 			province_id = 4736	#Trapani
 			province_id = 122 #Salento
@@ -182,6 +182,14 @@ has_strait_scripted_trigger = {
 			province_id = 36 #Reval
 			province_id = 623 #Tulangbewang
 			province_id = 624 #Banten
+			#New Italy Provinces
+			province_id = 4942 #Pantalleria
+			province_id = 4967 #Piombino
+			province_id = 4954 #Elba
+			province_id = 1247 #Bastia
+			province_id = 4991 #Venezia
+			province_id = 130 #Istria
+			province_id = 4753 #Zara
 		}
 }
 
