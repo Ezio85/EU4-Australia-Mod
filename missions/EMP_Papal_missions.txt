@@ -285,18 +285,18 @@ emp_pap_slot_1 = {
 			}
 			#New States
 			central_italy_area = {
-				limit = { owned_by = root }
-				add_province_modifier = {
-					name = mlo_unified_italy
-					duration = 7300
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 			north_apulia_area = {
-				limit = { owned_by = root }
-				add_province_modifier = {
-					name = mlo_unified_italy
-					duration = 7300
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}

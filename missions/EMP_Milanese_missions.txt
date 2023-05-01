@@ -228,6 +228,21 @@ emp_mlo_conquest_branch = {
 						duration = 7300
 					}
 				}
+				#New States
+				central_italy_area = {
+					limit = { owned_by = root }
+					add_province_modifier = {
+						name = mlo_unified_italy
+						duration = 7300
+					}
+				}
+				north_apulia_area = {
+					limit = { owned_by = root }
+					add_province_modifier = {
+						name = mlo_unified_italy
+						duration = 7300
+					}
+				}
 			}
 
 			italy_region = {
