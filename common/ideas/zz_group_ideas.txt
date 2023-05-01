@@ -229,7 +229,7 @@ berber_ideas = {
 	}
 	trans_saharan_trade = {
 		trade_efficiency = 0.1
-		caravan_power = 0.2
+		merchants = 1
 	}
 	corsairs = {
 		navy_tradition = 1
@@ -2166,7 +2166,7 @@ nubian_ideas = {
 		hostile_attrition = 1
 	}
 	nubian_long_distance_trade = {
-		caravan_power = 0.1
+		merchants = 1
 	}
 	nubian_religious_struggles = {
 		global_missionary_strength = 0.02
@@ -2404,7 +2404,7 @@ caspian_ideas = {
 		production_efficiency = 0.1
 	}
 	caspian_sea_trade = {
-		caravan_power = 0.2
+		merchants = 1
 	}
 	caspian_unite_minor_states = {
 		global_tax_modifier = 0.1

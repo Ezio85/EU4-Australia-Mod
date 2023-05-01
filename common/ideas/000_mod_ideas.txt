@@ -35,7 +35,7 @@ VOL_ideas = {
 	}
 	
 	vol_trade = {
-		caravan_power = 0.25
+		merchants = 1
 	}
 	
 	vol_chronicle = {

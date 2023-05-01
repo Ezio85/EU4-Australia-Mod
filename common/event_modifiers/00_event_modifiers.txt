@@ -11672,7 +11672,7 @@ maj_harmed_trade_relations = {
 
 a_moving_city = {
 	horde_unity = 0.5
-	caravan_power = 0.1
+	merchants = 1
 	trade_range_modifier = 0.25
 }
 

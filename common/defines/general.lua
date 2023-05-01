@@ -13,7 +13,6 @@ NDefines.NDiplomacy.MIN_RELATIONS_TO_ALLY = -200			-- from minus 25
 NDefines.NGovernment.RUSSIAN_ABILITY_STRELTSY_SPAWN_SIZE = 0.1 -- from 0.2
 NDefines.NMilitary.TRANSPORT_COST = 5							-- from 12
 NDefines.NMilitary.TRANSPORT_MAINT_FACTOR = 0.02				-- from 0.04
-NDefines.NEconomy.CARAVAN_FACTOR = 9.0							-- from 3.0
 NDefines.NMilitary.ARMY_ATTRITION_AT_SEA = 1					-- from 10
 NDefines.NCountry.MAX_TOLERANCE_HERETIC = 5						-- from 3
 NDefines.NCountry.MAX_TOLERANCE_HEATHEN = 5						-- from 3
@@ -26,9 +25,14 @@ NDefines.NCountry.NUM_PARLIAMENT_ISSUES = 10             -- from 5
 NDefines.NEconomy.TRADE_PROPAGATE_DIVIDER = 20          -- from 5   --Reduces downstream power to 5% instead of 20%
 NDefines.NEconomy.DEBASE_MAX_CORRUPTION = 20            -- from 90
 NDefines.NDiplomacy.NUM_OF_GREAT_POWERS	= 12            -- from 8
-NDefines.NEconomy.CARAVAN_POWER_MIN = 0
+
 NDefines.NCountry.MAXIMUM_CONDOTTIERI = 1               -- from 20 
 NDefines.NEconomy.DECREASE_AUTONOMY_MIN = 0             -- from 10
+
+-- Removal of Caravan Power
+NDefines.NEconomy.CARAVAN_POWER_MAX = 0
+NDefines.NEconomy.CARAVAN_POWER_MIN = 0
+
 -- Lategame economy changes
 NDefines.NMilitary.BASE_MP_TO_MANPOWER = 0.375            -- from 0.25
 NDefines.NEconomy.LAND_TECH_MAINTENANCE_IMPACT = 0.04   -- from 0.02

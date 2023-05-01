@@ -1746,7 +1746,7 @@ PER_ideas = {
 		discipline = 0.05
 	}
 	improved_silk_road = {
-		caravan_power = 0.2
+		merchants = 1
 	}
 	encouraged_art = {
 		prestige = 1
@@ -3616,7 +3616,7 @@ SON_ideas = {
 		tolerance_own = 2
 	}
 	trans_sahara_trade = {
-		caravan_power = 0.2
+		merchants = 1
 	}
 }
 
@@ -5021,7 +5021,7 @@ YAR_ideas = {
 
 PSK_ideas = {
 	start = {
-		caravan_power = 0.15
+		placed_merchant_power = 10
 		merchants = 1		
 	}
 	
@@ -5215,7 +5215,7 @@ MOL_ideas = {
 AIR_ideas = {
 	start = {
 		movement_speed = 0.15
-		caravan_power = 0.2
+		merchants = 1
 	}
 	
 	bonus = {
@@ -6369,7 +6369,7 @@ hausa_ideas = {
 	}
 	
 	sarakunan_kasuwa = {
-		caravan_power = 0.2
+		merchants = 1
 	}
 	
 	sarkin_yaki = {
@@ -6563,7 +6563,7 @@ KHI_ideas = {
 		hostile_attrition = 1
 	}
 	oasis_of_merv = {
-		caravan_power = 0.2
+		merchants = 1
 	}
 	djuma_mosque = {
 		global_missionary_strength = 0.01
@@ -7743,7 +7743,7 @@ CMI_ideas = {
 BAD_ideas = {
 	start = {
 		fort_maintenance_modifier = -0.1
-		caravan_power = 0.2
+		merchants = 1
 	}
 
 	bonus = {
@@ -7780,7 +7780,7 @@ BAD_ideas = {
 
 SDY_ideas = {
 	start = {
-		caravan_power = 0.2
+		merchants = 1
 		hostile_attrition = 1.0
 	}
 
@@ -8153,7 +8153,7 @@ KGR_ideas = {
 		garrison_size = 0.1
 	}
 	kgr_strengthen_the_mountain_trade = {
-		caravan_power = 0.15
+		merchants = 1
 	}
 	kgr_pahari_paintings = {
 		prestige = 1
@@ -8179,7 +8179,7 @@ KAS_ideas = {
 	free = yes
 	
 	kas_northern_silk_road = {
-		caravan_power = 0.2
+		merchants = 1
 	}
 	kas_altishahr = {
 		global_tax_modifier = 0.1
@@ -8333,7 +8333,7 @@ NZH_ideas = {
 	free = yes		#
 	
 	nzh_at_the_confluence_of_two_giants = {
-		caravan_power = 0.20
+		merchants = 1
 	}
 	nzh_crossroads_of_nations = {
 		development_cost = -0.1
@@ -8567,7 +8567,7 @@ CDL_ideas = {
 		prestige = 1
 	}
 	cdl_tea_horse_route = {
-		caravan_power = 0.2
+		merchants = 1
 	}
 	cdl_confucian_influences = {
 		global_tax_modifier = 0.1
@@ -8665,7 +8665,7 @@ TRT_ideas = {
 
 MRA_ideas = {
 	start = {
-		caravan_power = 0.2
+		merchants = 1
 		infantry_cost = -0.1
 	}
 	
@@ -8966,7 +8966,7 @@ TBK_ideas = {
 		tolerance_own = 2
 	}
 	tbk_inter_african_trade = {
-		caravan_power = 0.2
+		merchants = 1
 	}
 	tbk_break_the_power_of_the_makambala = {
 		global_unrest = -1
@@ -9322,7 +9322,7 @@ CEP_ideas = {
 
 LOR_ideas = {
 	start = {
-		caravan_power = 0.2
+		merchants = 1
 		infantry_cost = -0.1
 	}
 	bonus = {
@@ -9723,7 +9723,7 @@ OKA_ideas = {
 		fort_maintenance_modifier = -0.2
 	}
 	oka_strengthen_the_oka_river_trade = {
-		caravan_power = 0.2
+		merchants = 1
 	}
 }
 
@@ -12277,7 +12277,7 @@ SRV_ideas = {
 		same_culture_advisor_cost = -0.2
 	}
 	srv_caspian_trade = {
-		caravan_power = 0.2
+		merchants = 1
 	}
 	srv_shirvani_architecture = {
 		build_cost = -0.1
@@ -14048,7 +14048,7 @@ SND_ideas = {
 DHU_ideas = {
 	start = {
 		land_morale = 0.1
-		caravan_power = 0.2
+		merchants = 1
 	}
 	
 	bonus = {
@@ -14362,7 +14362,7 @@ SYN_ideas = {
 	}
 	trans_saharan_trade = {
 		trade_efficiency = 0.1
-		caravan_power = 0.2
+		merchants = 1
 	}
 	mor_fleet = {
 		galley_power = 0.2
@@ -16539,7 +16539,7 @@ SOM_ideas = {
 		stability_cost_modifier = -0.1
 	}
 	SOM_african_silk_road = {
-		caravan_power = 0.2
+		merchants = 1
 		trade_steering = 0.15
 	}
 	SOM_african_minting = {

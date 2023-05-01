@@ -3132,7 +3132,7 @@ lit_conquered_rus = {
 # Moroccan missions
 
 mor_saharan_trade = {
-	caravan_power = 0.33
+	merchants = 1
 }
 
 conquest_of_benin_mor = {
