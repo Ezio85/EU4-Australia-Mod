@@ -32,6 +32,9 @@ hre_elector_modifier = {
 
 	trigger = {
 		is_elector = yes
+		NOT = {
+			total_development = 300
+		}
 	}
 
 	infantry_power = 0.05
