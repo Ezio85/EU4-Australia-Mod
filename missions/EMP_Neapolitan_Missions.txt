@@ -277,11 +277,13 @@ emp_naples_3 = {
 			#New Provinces
 
 			4732 = { #Terracina
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+				if = {
+					limit = {
+						NOT = { is_core = root }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = root
 				}
-				add_permanent_claim = ROOT
 			}
 			lower_tuscany_area = {
 				limit = {
