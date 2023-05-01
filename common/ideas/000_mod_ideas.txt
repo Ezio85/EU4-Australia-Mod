@@ -497,7 +497,7 @@ IFR_ideas = {
 
 	start = {
 		may_perform_slave_raid = yes
-		naval_morale = 0.15
+		naval_morale = 0.1
 	}
 	
 	bonus = {
@@ -517,7 +517,7 @@ IFR_ideas = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	ifr_catalan_guard = {
-		infantry_power = 0.15
+		infantry_power = 0.1
 	}
 	ifr_caliphate = {
 		manpower_in_true_faith_provinces = 0.25
