@@ -1367,36 +1367,6 @@ gc_spain_4 = {
 		effect = {
 			if = {
 				limit = {
-					exists = POR
-					valid_for_personal_unions_trigger = yes
-					POR = {
-						valid_for_personal_unions_trigger = yes
-					}
-				}
-				add_casus_belli = {
-					type = cb_restore_personal_union
-					months = 300
-					target = POR
-				}
-			}
-			else = {
-				alentejo_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-				beieras_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			if = {
-				limit = {
 					exists = NAP
 					valid_for_personal_unions_trigger = yes
 					NAP = {
@@ -1422,6 +1392,13 @@ gc_spain_4 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				naples_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				calabria_area = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -1436,21 +1413,27 @@ gc_spain_4 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				naples_area = {
+				#New States
+				central_italy_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
-				120 = {
-					if = {
-						limit = {
-							NOT = { is_core = ROOT }
-							NOT = { is_permanent_claim = ROOT }
-						}
-					add_permanent_claim = ROOT
+				north_apulia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
+					add_permanent_claim = ROOT
+				}
+				central_sicily_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
 			}
 			else = {
@@ -1507,7 +1490,10 @@ gc_spain_4 = {
 				area = calabria_area
 				area = apulia_area
 				area = naples_area
-				province_id = 120
+				#New States
+				area = central_sicily_area
+				area = central_italy_area
+				area = north_apulia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1538,7 +1524,14 @@ gc_spain_4 = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
-					120 = {
+					#New States
+					central_sicily_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					central_italy_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					north_apulia_area = {
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
