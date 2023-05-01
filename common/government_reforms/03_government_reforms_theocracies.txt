@@ -581,6 +581,9 @@ education_of_the_bishop_reform = {
 	modifiers = {
 		monarch_lifespan = 0.2
 	}
+	trigger = {
+		always = no
+	}
 	effect = {
 		hidden_effect = {
 			country_event = {
@@ -607,7 +610,7 @@ education_of_the_advisors_reform = {
 	icon = "arabic_scripture"
 	allow_normal_conversion = yes
 	modifiers = {
-		advisor_cost = -0.15
+		advisor_cost = -0.05
 	}
 }
 
