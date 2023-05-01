@@ -89,7 +89,20 @@ age_of_discovery = {
 			allow = {
 				NOT = { religion_group = christian }
 			}
-			vassal = 5
+			calc_true_if = {
+				all_subject_country = {
+					OR = {
+						is_subject_of_type  = vassal
+						is_subject_of_type  = march
+						is_subject_of_type  = client_vassal
+						is_subject_of_type  = client_march
+						#Eyalets and Appanages in 1.35
+					}
+				}
+				amount = 5
+				
+			}
+			
 		}		
 	
 		obj_two_continents = {
