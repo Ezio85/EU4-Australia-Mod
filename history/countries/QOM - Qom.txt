@@ -19,8 +19,8 @@ capital = 2213 # Qom
 		adm = 3
 		dip = 2
 		mil = 4
-		culture = uzbehk
-		religion = sunni
+		culture = persian
+		religion = shiite
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = bold_fighter_personality
