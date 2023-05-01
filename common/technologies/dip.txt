@@ -116,7 +116,7 @@ technology = { #Shipyards
 	}
 	
 	dock = yes	
-	may_steal_maps = yes
+	#may_steal_maps = yes
 
 }
 
