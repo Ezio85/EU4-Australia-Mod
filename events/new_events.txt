@@ -251,6 +251,13 @@ country_event = {
 			}
 			set_country_flag = can_form_prussia_flag
 		}
+		#Fixes issue with Pavia's province name
+		4728 = {
+			change_province_name = "Pavi"
+		}
+		4728 = {
+			change_province_name = "Pavia"
+		}
 		
 
 	}
