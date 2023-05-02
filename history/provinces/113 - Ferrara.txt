@@ -13,6 +13,7 @@ capital = "Ferrara"
 is_city = yes
 add_core = FER
 
+fort_15th = yes
 
 discovered_by = western
 discovered_by = eastern
